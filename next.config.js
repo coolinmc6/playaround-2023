@@ -1,7 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
- // Add basePath
-  basePath: '/playaround-2023',
-}
+const nextConfig = {}
 
 module.exports = nextConfig
