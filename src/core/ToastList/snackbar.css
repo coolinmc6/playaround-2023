@@ -1,0 +1,37 @@
+/* Default styles */
+.snackbar {
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 4px;
+}
+
+/* Success */ 
+.snackbar--success {
+  background: #d4edda; 
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+/* Error */
+.snackbar--error {
+  background: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;  
+}
+
+/* Warning */
+.snackbar--warning {
+  background: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+} 
+
+/* Info */
+.snackbar--info {
+  background: #d1ecf1;
+  border-color: #bee5eb;
+  color: #0c5460;
+}

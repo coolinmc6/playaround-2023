@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import ToastList from '@/core/ToastList/ToastList'
 
 
 export const metadata: Metadata = {
@@ -14,7 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="relative">
+        {children}
+        <ToastList />
+      </body>
     </html>
   )
 }
