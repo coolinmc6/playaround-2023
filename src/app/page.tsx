@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import { addToast, type Severity } from '@store/toast';
+import Button from '@/core/Button';
+import Link from '@/core/Link'
 
 const Home = () => {
   const severityStates = ['success', 'info', 'warning', 'error']
@@ -20,9 +22,14 @@ const Home = () => {
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="min-h-screen items-center p-12">
       <h1 className="text-3xl mb-2">React Playaround 2023</h1>
-      <button onClick={addRandomToast}>Add Random Toast</button>
+      <h2 className="text-xl mb-4">Concepts</h2>
+      <ul className="list-disc list-inside">
+      <li><Link to="/concepts/custom-hooks">Custom Hooks</Link></li>
+        <li><Link to="/concepts/performance">Performance</Link></li>
+      </ul>
+      <Button onClick={addRandomToast}>Add Random Toast</Button>
     </main>
   )
 }

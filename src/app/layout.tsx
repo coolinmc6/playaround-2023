@@ -1,4 +1,5 @@
-import './globals.css'
+import './styles/globals.css'
+import './styles/prism.css'
 import type { Metadata } from 'next'
 import ToastList from '@/core/ToastList/ToastList'
 
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body className="relative">
         {children}
         <ToastList />
+        <script async src="./prism.js"></script>
       </body>
     </html>
   )
