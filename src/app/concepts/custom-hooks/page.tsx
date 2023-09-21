@@ -3,6 +3,7 @@
 import useCount from '@/app/hooks/basic/useCount'
 import Code from '@/core/Code'
 import CodeDescription from '@/core/CodeDescription';
+import CodeBlock from '@/core/CodeBlock';
 import Typography from '@/core/Typography';
 
 const CustomHooks = () => {
@@ -13,6 +14,7 @@ const CustomHooks = () => {
       <h1 className="text-3xl mb-2">Custom Hooks</h1>
       <h2 className="text-2xl mb-2 text-blue-800">useCount</h2>
       <CodeDescription>
+        <>
         <div className="pb-6 text-center">
           <p>Count: {count}</p>
           <p><button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded" onClick={() => increment()}>Increment</button></p>
@@ -27,6 +29,32 @@ const CustomHooks = () => {
           because I wanted to note the TypeScript typing of the <Code>setCount</Code> part of the code:&nbsp;
           <Code>setCount: Dispatch&lt;SetStateAction&lt;number&gt;&gt;</Code>
         </Typography>
+        </>
+      
+      <CodeBlock language="javascript">
+{`
+
+import { useState } from 'react';
+
+type UseCount = {
+  count: number;
+  increment: () => void;
+  setCount: Dispatch<SetStateAction<number>>;
+}
+
+const useCount = (initialCount: number): UseCount => {
+  const [count, setCount] = useState(initialCount);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  return { count, increment, setCount };
+};
+
+export default useCount;
+`}
+      </CodeBlock>
       </CodeDescription>
     </div>
   )
