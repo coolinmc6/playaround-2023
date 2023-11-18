@@ -2,3 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Dashness';
+  src: url('/fonts/dashness.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'KGPrimaryDots';
+  src: url('/fonts/KGPrimaryDots.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KGPrimaryDotsLined';
+  src: url('/fonts/KGPrimaryDotsLined.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KGPrimaryDotsLinedAlt';
+  src: url('/fonts/KGPrimaryDotsLinedAlt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KGPrimaryDotsLinedAlt2';
+  src: url('/fonts/KGPrimaryDotsLinedNOSPACE.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

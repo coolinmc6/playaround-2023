@@ -1,13 +1,14 @@
 'use client';
 
 import { useMemo, useState } from 'react'
+import UseCallbackComponent from './components/useCallback';
 
 /**
  * useMemo example from: https://dmitripavlutin.com/react-usememo-hook/
  * 
  */
 
-export default function Performance() {
+export default function Performance () {
   const [number, setNumber] = useState(1);
   const [increment, setIncrement] = useState(0);
 
@@ -49,18 +50,19 @@ export default function Performance() {
       <div>
         Factorial of {' '}
         <input
-         type="number"
-         className="w-[100px] px-3 py-2 border rounded shadow text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-         value={number}
-         onChange={onChange} />{' '}
+          type="number"
+          className="w-[100px] px-3 py-2 border rounded shadow text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          value={number}
+          onChange={onChange} />{' '}
         is {factorial}{' '}
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={onClick}>Re-render</button>
-    </div>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={onClick}>Re-render</button>
+      </div>
+      <UseCallbackComponent />
     </main>
   )
 }
 
-function factorialOf(n: number): number {
+function factorialOf (n: number): number {
   console.log('factorialOf(n) called!');
   return n <= 0 ? 1 : n * factorialOf(n - 1);
 }
