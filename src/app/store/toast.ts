@@ -26,7 +26,7 @@ const testToast: Toast = {
 }
 
 const initialState: ToastState = {
-  toasts: [testToast],
+  toasts: [],
 }
 
 export const useToastStore = create<ToastState & ToastActions>((set, get) => ({

@@ -18,7 +18,7 @@ const Button = ({
   variant = 'primary',
 }: ButtonProps) => {
 
-  const baseStyle = 'flex items-center justify-center rounded font-medium';
+  const baseStyle = 'items-center justify-center rounded font-medium';
 
   const variantStyles = {
     primary: 'bg-blue-500 text-white',
@@ -33,9 +33,9 @@ const Button = ({
   
   return (
     <button 
-    className={`${baseStyle} ${variantStyles[variant]} ${sizeStyles[size]} ${
-      block ? 'w-full' : ''
-    }`}
+      className={`${baseStyle} ${variantStyles[variant]} ${sizeStyles[size]} ${
+        block ? 'w-full' : ''
+      }`}
       disabled={loading}
       onClick={onClick}
     >

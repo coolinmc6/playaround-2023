@@ -6,7 +6,7 @@ const postsDirectory = path.join(process.cwd(), 'posts');
 
 console.log(process.cwd())
 
-export function getSortedPostsData() {
+export function getSortedPostsData () {
   console.log(process.cwd())
 
   return [
@@ -41,7 +41,7 @@ export function getSortedPostsData() {
   });
 }
 
-export function getPostData(id) {
+export function getPostData (id) {
   
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -56,7 +56,7 @@ export function getPostData(id) {
   };
 }
 
-export function getAllPostIds() {
+export function getAllPostIds () {
   console.log(process.cwd())
   console.log(postsDirectory)
   return [

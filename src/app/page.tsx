@@ -9,7 +9,6 @@ const Home = () => {
   const severityStates = ['success', 'info', 'warning', 'error']
   const [num, setNum] = useState(0)
   const addRandomToast = () => {
-    console.log('use random toast button')
     const severity = severityStates[num] as Severity
     addToast({
       message: `This is a ${severity} toast`,
@@ -20,16 +19,12 @@ const Home = () => {
     setNum((num + 1) % 4)
   }
 
-
   return (
     <main className="min-h-screen items-center p-12">
-      <h1 className="text-3xl mb-2">React Playaround 2023</h1>
-      <h2 className="text-xl mb-4">Concepts</h2>
-      <ul className="list-disc list-inside">
-      <li><Link to="/concepts/custom-hooks">Custom Hooks</Link></li>
-        <li><Link to="/concepts/performance">Performance</Link></li>
-      </ul>
-      <Button onClick={addRandomToast}>Add Random Toast</Button>
+      <h1 className="text-3xl mb-2 text-center">React Playaround 2023</h1>
+      <div className="text-center">
+        <Button onClick={addRandomToast}>Add Random Toast</Button>
+      </div>
     </main>
   )
 }
