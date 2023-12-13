@@ -34,22 +34,23 @@ const CustomHooks = () => {
         <CodeBlock language="javascript">
           {`
 
-import { useState } from 'react';
+import { useState, Dispatch, SetStateAction } from 'react';
 
-type UseCount = {
+type UseCountReturn = {
   count: number;
-  increment: () => void;
   setCount: Dispatch<SetStateAction<number>>;
-}
+  increment: () => void; 
+};
 
-const useCount = (initialCount: number): UseCount => {
-  const [count, setCount] = useState(initialCount);
+const useCount = (number = 0): UseCountReturn => {
+  const [count, setCount] = useState(number);
+  const increment = () => setCount(c => c + 1);
 
-  const increment = () => {
-    setCount(count + 1);
+  return {
+    count,
+    setCount,
+    increment 
   };
-
-  return { count, increment, setCount };
 };
 
 export default useCount;
