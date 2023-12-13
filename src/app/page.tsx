@@ -22,6 +22,7 @@ const Home = () => {
   return (
     <main className="min-h-screen items-center p-12">
       <h1 className="text-3xl mb-2 text-center">React Playaround 2023</h1>
+      Live app on Vercel: https://playaround-2023.vercel.app/
       <div className="text-center">
         <Button onClick={addRandomToast}>Add Random Toast</Button>
       </div>
