@@ -33,7 +33,6 @@ const CustomHooks = () => {
       
         <CodeBlock language="javascript">
           {`
-
 import { useState, Dispatch, SetStateAction } from 'react';
 
 type UseCountReturn = {
