@@ -21,6 +21,9 @@ const Sidebar = () => {
   return (
     <div className="fixed top-0 left-0 h-full w-64 bg-blue-100 flex flex-col">
       {paths}
+      <div className="absolute bottom-0 left-0 w-full">
+        {process.env.NEXT_PUBLIC_ENVIRONMENT}
+      </div>
     </div>
   )
 }

@@ -8,7 +8,7 @@ import ToastList from '@/core/ToastList/ToastList'
 
 export const metadata: Metadata = {
   title: 'React Playaround 2023',
-  description: 'A place to practice concepts, patterns, and ideas in React, Next.js, and TypeScript.',
+  description: 'The place to practice concepts, patterns, and ideas in React, Next.js, and TypeScript.',
 }
 
 export default function RootLayout ({
