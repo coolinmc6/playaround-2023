@@ -6,7 +6,6 @@
     // Additional rules for spacing
     "space-before-blocks": "error",
     "space-infix-ops": "error",
-    "space-before-function-paren": ["error", "always"]
     // ... other rules
   }
 }
