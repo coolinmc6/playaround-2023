@@ -8,6 +8,15 @@ const nextConfig = () => {
       },
     ];
   };
+  const redirects = () => {
+    return [
+      {
+        source: '/dev-tools',
+        destination: process.env.NEXT_PUBLIC_ENVIRONMENT === 'production' ? '/' : '/dev-tools',
+        permanent: true,
+      }
+    ]
+  }
   return {
     rewrites,
   };
