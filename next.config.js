@@ -9,13 +9,16 @@ const nextConfig = () => {
     ];
   };
   const redirects = () => {
-    return [
-      {
+    const allRedirects = [];
+
+    if (process.env.NEXT_PUBLIC_ENVIRONMENT === 'production') {
+      allRedirects.push({
         source: '/dev-tools',
-        destination: process.env.NEXT_PUBLIC_ENVIRONMENT === 'production' ? '/' : '/dev-tools',
+        destination: '/',
         permanent: true,
-      }
-    ]
+      });
+    }
+    return allRedirects;
   }
   return {
     rewrites,
