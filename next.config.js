@@ -19,6 +19,7 @@ const nextConfig = () => {
   }
   return {
     rewrites,
+    redirects,
   };
 }
 
