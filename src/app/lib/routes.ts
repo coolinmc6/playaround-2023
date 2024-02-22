@@ -32,3 +32,4 @@ export const routes: Routes = {
   WORDLE: { path: '/random/wordle', name: 'Wordle', category: PERSONAL },
 }
 
+export const routesArray = Object.keys(routes).map((key) => routes[key])

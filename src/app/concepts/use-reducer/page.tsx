@@ -27,6 +27,7 @@ export default function UseReducerHome () {
           <Code>handleChangeTask</Code>, etc. to just dispatching an action to the reducer.
         </p>
       </NotesSection>
+      <h2 className="pb-4">Final Code</h2>
       <FinalApp />
       <NotesSection>
         <p className="pb-4">
@@ -47,6 +48,7 @@ export default function UseReducerHome () {
           same handler functions, they're now just calling dispatch for the reducer to handle the state change.
         </p>
       </NotesSection>
+      <h2 className="pb-4">My Example</h2>
       <ColinApp />
       <NotesSection>
         <p className="pb-4">
