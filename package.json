@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "server": "nodemon server/app.mjs"
+    "server": "nodemon server/app.mjs",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@tremor/react": "^3.11.1",
@@ -37,7 +39,17 @@
     "zustand": "^4.4.1"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/nextjs": "^7.6.17",
+    "@storybook/react": "^7.6.17",
+    "@storybook/test": "^7.6.17",
     "@types/prismjs": "^1.26.0",
-    "babel-plugin-prismjs": "^2.1.0"
+    "babel-plugin-prismjs": "^2.1.0",
+    "eslint-plugin-storybook": "^0.8.0",
+    "storybook": "^7.6.17"
   }
 }
