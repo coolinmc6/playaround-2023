@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary';
   size?: 'small' | 'medium' | 'large'; 
   block?: boolean;
@@ -16,6 +16,7 @@ const Button = ({
   onClick,
   size = 'medium',
   variant = 'primary',
+  ...rest
 }: ButtonProps) => {
 
   const baseStyle = 'items-center justify-center rounded font-medium';
@@ -38,6 +39,7 @@ const Button = ({
       }`}
       disabled={loading}
       onClick={onClick}
+      {...rest}
     >
       {children}
     </button>
