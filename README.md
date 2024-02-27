@@ -9,6 +9,14 @@ Run the dev server:
 npm run dev
 ```
 
-Next Steps:
-- do the rendering page. I want to test the loadData function and understand why it is not working well. I'll need to create a new store
-to emulate the issue I'm having
+Run the express server:
+
+```bash
+npm run server
+```
+
+Run storybook:
+
+```bash
+npm run storybook
+```

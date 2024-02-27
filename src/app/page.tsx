@@ -24,7 +24,7 @@ const Home = () => {
       <h1 className="text-3xl mb-2 text-center">React Playaround 2023</h1>
       View the app on <Link to="https://playaround-2023.vercel.app/">Vercel (https://playaround-2023.vercel.app/)</Link>
       <div className="text-center">
-        <Button onClick={addRandomToast}>Add Random Toast</Button>
+        <Button variant="primary" onClick={addRandomToast}>Add Random Toast</Button>
       </div>
     </main>
   )
