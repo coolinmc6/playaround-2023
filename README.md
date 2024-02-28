@@ -21,3 +21,8 @@ Run storybook:
 ```bash
 npm run storybook
 ```
+
+### Next Steps
+
+- Style the blog, get the blog home working, create a bunch more examples
+- 
