@@ -9,9 +9,7 @@ export default async function Post () {
   const postDataIds = getAllPostIds();
   const id = postDataIds[0].params.id;
   const postData = getPostData(id);
-  // console.log(postData.content);
   const html = await markdownToHtml(postData.content || '');
-  console.log(html)
   return (
     <article className="blog-parent p-3">
       <div className="blog-title">
