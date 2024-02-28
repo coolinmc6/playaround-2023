@@ -11,7 +11,7 @@ const Home = () => {
   const addRandomToast = () => {
     const severity = severityStates[num] as Severity
     addToast({
-      message: `This is a ${severity} toast`,
+      message: `This is a toast`,
       id: Math.random().toString(),
       open: true,
       severity,

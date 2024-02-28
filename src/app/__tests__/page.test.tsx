@@ -2,7 +2,13 @@ import { render, screen, act } from '@testing-library/react';
 import Home from '@/app/page';
 import ToastList from '@/core/ToastList';
 
-// jest.mock('@/app/store/toast')
+// jest.mock('@/app/store/toast', () => ({
+//   useToastStore: () => ({
+//     toasts: [],
+//     addToast: jest.fn()
+//   }),
+//   addToast: jest.fn()
+// }))
 
 const TestContainer = () => {
   return (
@@ -24,14 +30,15 @@ describe('Home', () => {
     expect(title).toHaveTextContent('React Playaround 2023');
   })
 
-  // it('should show a toast when user clicks the button', async () => {
-  //   render(<TestContainer />)
-  //   const button = screen.getByRole('button');
-  //   act(() => {
-  //     button.click();
-  //   })
+  it('should show a toast when user clicks the button', async () => {
+    render(<TestContainer />)
+    const button = screen.getByRole('button');
+    act(() => {
+      button.click();
+    })
     
-  //   expect(addToastSpy).toHaveBeenCalled();
-  // })
+    const toastItem = await screen.findByText('This is a toast');
+    expect(toastItem).toHaveTextContent('toast');
+  })
 });
 

@@ -9,7 +9,7 @@ export type Toast = {
   message: string;
 }
 
-type ToastState = {
+export type ToastState = {
   toasts: Toast[]
 }
 
