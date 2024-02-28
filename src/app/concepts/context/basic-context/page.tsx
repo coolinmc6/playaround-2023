@@ -21,10 +21,10 @@ export default function BasicContext() {
       <div className="react-exercise">
         <Section>
           <Heading >Title</Heading>
-            <Section>
-              <Heading >Heading</Heading>
-              <Heading >Heading</Heading>
-              <Heading >Heading</Heading>
+          <Section>
+            <Heading >Heading</Heading>
+            <Heading >Heading</Heading>
+            <Heading >Heading</Heading>
             <Section>
               <Heading >Sub-heading</Heading>
               <Heading >Sub-heading</Heading>
