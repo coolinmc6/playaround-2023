@@ -9,12 +9,15 @@
     "lint": "next lint",
     "server": "nodemon server/app.mjs",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "jest",
+    "test:coverage": "jest --coverage && open ./coverage/lcov-report/index.html",
+    "test:coverage:all": "jest --coverage --collectCoverageFrom='src/**/*.{js,jsx,ts,tsx}' && open ./coverage/lcov-report/index.html",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@tremor/react": "^3.11.1",
     "@types/node": "20.5.0",
-    "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
     "axios": "^1.6.2",
@@ -48,9 +51,19 @@
     "@storybook/nextjs": "^7.6.17",
     "@storybook/react": "^7.6.17",
     "@storybook/test": "^7.6.17",
+    "@swc/core": "^1.4.2",
+    "@swc/jest": "^0.2.36",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "@types/jest": "^29.5.12",
     "@types/prismjs": "^1.26.0",
+    "@types/react": "^18.2.60",
+    "babel-jest": "^29.7.0",
     "babel-plugin-prismjs": "^2.1.0",
     "eslint-plugin-storybook": "^0.8.0",
-    "storybook": "^7.6.17"
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "storybook": "^7.6.17",
+    "ts-node": "^10.9.2"
   }
 }

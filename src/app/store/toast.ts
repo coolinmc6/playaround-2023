@@ -25,7 +25,7 @@ const testToast: Toast = {
   message: 'This is a test toast',
 }
 
-const initialState: ToastState = {
+export const initialState: ToastState = {
   toasts: [],
 }
 
