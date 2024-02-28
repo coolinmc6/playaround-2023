@@ -1,0 +1,23 @@
+h1 {
+  font-size: 2.5em; /* 40px if base font-size is 16px */
+}
+
+h2 {
+  font-size: 2em; /* 32px if base font-size is 16px */
+}
+
+h3 {
+  font-size: 1.75em; /* 28px if base font-size is 16px */
+}
+
+h4 {
+  font-size: 1.5em; /* 24px if base font-size is 16px */
+}
+
+h5 {
+  font-size: 1.25em; /* 20px if base font-size is 16px */
+}
+
+h6 {
+  font-size: 1em; /* 16px if base font-size is 16px */
+}
