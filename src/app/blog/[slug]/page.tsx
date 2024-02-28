@@ -12,7 +12,7 @@ export default async function Post () {
   const html = await markdownToHtml(postData.content || '');
   return (
     <article className="blog-parent p-3">
-      <div className="blog-title">
+      <section className="blog-title">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left" >
           {postData.title}
         </h1>
@@ -20,10 +20,10 @@ export default async function Post () {
         {postData.id}
         <br />
         {postData.date}
-      </div>
+      </section>
       
       <br />
-      <div className="blog-content max-w-2xl mx-auto" dangerouslySetInnerHTML={{ __html: html }} />
+      <section className="blog-content max-w-2xl mx-auto" dangerouslySetInnerHTML={{ __html: html }} />
     </article>
   );
 }

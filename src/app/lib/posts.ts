@@ -15,11 +15,6 @@ type Post = {
 // console.log(process.cwd())
 
 export function getSortedPostsData () {
-  // console.log(process.cwd())
-
-  // return [
-  //   { id: 123, title: 'First Post'}
-  // ]
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
@@ -33,10 +28,6 @@ export function getSortedPostsData () {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
     const htmlContent = marked.parse(matterResult.content);
-    console.log('htmlContent: ', htmlContent)
-
-    console.log('HEY')
-
     // Combine the data with the id
     return {
       id,
