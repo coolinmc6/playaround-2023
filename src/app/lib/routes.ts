@@ -29,6 +29,7 @@ export let routes: Routes = {
   USE_REDUCER: { path: '/concepts/use-reducer', name: 'Use Reducer', category: CONCEPTS, divider: true },
 
   RANDOM_HOME: { path: '/random', name: 'Random Home', category: PERSONAL, bold: true },
+  BLOG_TEST: { path: '/blog/pre-rendering', name: 'Blog Test', category: PERSONAL },
   LETTERS: { path: '/random/letters', name: 'Tracing Letters', category: PERSONAL },
   CALENDAR: { path: '/random/calendar', name: 'Calendar', category: PERSONAL },
   WORDLE: { path: '/random/wordle', name: 'Wordle', category: PERSONAL, divider: true },
