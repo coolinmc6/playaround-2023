@@ -19,10 +19,28 @@ type Category = typeof CONCEPTS | typeof PERSONAL | typeof NAVIGATION
 
 const DEV_TOOLS: Route = { path: '/dev-tools', name: 'Dev Tools', category: NAVIGATION, bold: true }
 
+
+
+const allRoutes: Route[] = [
+  { path: '/', name: 'Home', category: NAVIGATION, bold: true, divider: true },
+  { path: '/concepts', name: 'Concepts Home', category: CONCEPTS, bold: true },
+  { path: '/concepts/context', name: 'Context', category: CONCEPTS, bold: false },
+  { path: '/concepts/custom-hooks', name: 'Custom Hooks', category: CONCEPTS },
+  { path: '/concepts/performance', name: 'Performance', category: CONCEPTS },
+  { path: '/concepts/rendering', name: 'Rendering', category: CONCEPTS },
+  { path: '/concepts/use-reducer', name: 'Use Reducer', category: CONCEPTS, divider: true },
+  { path: '/random', name: 'Random Home', category: PERSONAL, bold: true },
+  { path: '/random/letters', name: 'Tracing Letters', category: PERSONAL },
+  { path: '/random/calendar', name: 'Calendar', category: PERSONAL },
+  { path: '/random/wordle', name: 'Wordle', category: PERSONAL, divider: true },
+  DEV_TOOLS,
+]
+
 export let routes: Routes = {
   HOME: { path: '/', name: 'Home', category: NAVIGATION, bold: true, divider: true },
 
   CONCEPTS: { path: '/concepts', name: 'Concepts Home', category: CONCEPTS, bold: true },
+  BASIC_CONTEXT: { path: '/concepts/context/basic-context', name: 'Basic Context Example', category: CONCEPTS, bold: false },
   CUSTOM_HOOKS: { path: '/concepts/custom-hooks', name: 'Custom Hooks', category: CONCEPTS },
   PERFORMANCE: { path: '/concepts/performance', name: 'Performance', category: CONCEPTS },
   RENDERING: { path: '/concepts/rendering', name: 'Rendering', category: CONCEPTS },

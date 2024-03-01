@@ -12,7 +12,7 @@ export default function BasicContext() {
       <h1>Basic Context</h1>
       <NotesSection>
         <p className="pb-4">
-          No before and after this time. The elements below show the final working code
+          I&apos;m not doing a before-and-after this time. The elements below show the final working code
           for this exercise <Link to="https://react.dev/learn/passing-data-deeply-with-context">Passing Data Deeply with Context</Link>{' '}
           which was interesting. I definitely have a much better understanding of context though I tend to not
           like using it. I do want to hit the basics below.

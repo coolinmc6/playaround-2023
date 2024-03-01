@@ -1,5 +1,6 @@
 'use client';
 
+import UseCountdownExample from '@/app/concepts/custom-hooks/UseCountdownExample';
 import useCount from '@/app/hooks/basic/useCount'
 import Code from '@/core/Code'
 import CodeDescription from '@/core/CodeDescription';
@@ -56,6 +57,7 @@ export default useCount;
 `}
         </CodeBlock>
       </CodeDescription>
+      <UseCountdownExample />
     </div>
   )
 }

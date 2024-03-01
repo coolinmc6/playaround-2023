@@ -13,4 +13,12 @@ const NotesSection = ({ children }: NotesSectionProps) => {
   )
 }
 
+const NotesSectionParagraph = ({ children }: NotesSectionProps) => {
+  return (
+    <p className="pb-4">{children}</p>
+  )
+}
+
 export default NotesSection;
+
+NotesSection.Paragraph = NotesSectionParagraph;
