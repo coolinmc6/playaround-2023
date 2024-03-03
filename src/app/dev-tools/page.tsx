@@ -7,6 +7,7 @@ import InputWithLabel from '@/core/InputWithLabel';
 import RoughCard from '@/core/RoughCard';
 import { addToast } from '@store/toast';
 import Button from '@/core/Button';
+import Chip from '@/core/Chip';
 
 const DevToolsHomePage = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -17,21 +18,21 @@ const DevToolsHomePage = () => {
       url: 'http://localhost:3000/api/get-data',
       method: 'get',
     }).then((res) => {
-        console.log(res)
-        const data = res.data;
-        const paragraphs = data?.content?.map((item: any) => {
-          return {
-            ...item,
-            links: data.citations.filter((citation: any) => citation['Paragraph ID'] === item.Id).map((citation: any) => {
-              const linkId = citation['Link ID'];
-              return data.links.find((link: any) => link.ID === linkId)
-            })
-          }
-        })
-
-        setContentData(paragraphs)
-        console.log(paragraphs)
+      console.log(res)
+      const data = res.data;
+      const paragraphs = data?.content?.map((item: any) => {
+        return {
+          ...item,
+          links: data.citations.filter((citation: any) => citation['Paragraph ID'] === item.Id).map((citation: any) => {
+            const linkId = citation['Link ID'];
+            return data.links.find((link: any) => link.ID === linkId)
+          })
+        }
       })
+
+      setContentData(paragraphs)
+      console.log(paragraphs)
+    })
       .catch((err) => {
         if (err.response) {
           console.log(err.response.data);
@@ -44,7 +45,7 @@ const DevToolsHomePage = () => {
         }
         console.log(err.config);
       
-    })
+      })
   }
 
   const handleSubmit = (e: any) => {
@@ -76,17 +77,19 @@ const DevToolsHomePage = () => {
       method: 'post',
       data,
     }).then((res) => {
-        console.log(res)
-        addToast({
-          message: 'Content added successfully',
-          id: Math.random().toString(),
-          open: true,
-          severity: 'success',
-        })
-        if (formRef.current !== null) {
-          // formRef.current.reset();
-        }
+      console.log(res)
+      addToast({
+        message: 'Content added successfully',
+        id: Math.random().toString(),
+        open: true,
+        severity: 'success',
       })
+      loadData();
+      if (formRef.current !== null) {
+        // UNCOMMENT WHEN READY: Clear the form on submit
+        // formRef.current.reset();
+      }
+    })
       .catch((err) => {
         if (err.response) {
           // The request was made and the server responded with a status code
@@ -129,30 +132,28 @@ const DevToolsHomePage = () => {
       </form>
       <div>
         <Button onClick={loadData}>Load Data</Button>
-        <div>
+        <h2 className="text-2xl mt-3">Content <Chip variant="primary">{contentData.length}</Chip></h2>
+        <div className="grid grid-cols-2">
           {contentData.map((item: any) => {
             return (
-              <div key={item.ID}>
-                <div>
-                  <strong>{item.Title}</strong><br />
-                  <strong>{item.Topic}</strong><br />
-                  <strong>{item.SubTopic}</strong><br />
-                  {item.Content1}<br />
-                  {item.Content2}
-                </div>
-
+              <RoughCard title={item.title} key={item.ID}>
+                <div><strong>Title:</strong> {item.Title}</div>
+                <div><strong>Topic:</strong> {item.Topic}</div>
+                <div><strong>SubTitle:</strong> {item.SubTopic}</div>
+                <div>{item.Content1}</div>
+                <div>{item.Content2}</div>
                 <div>
                   <strong>Links</strong><br />
                   {item.links.length ? item.links.map((link: any) => {
                     console.log(link)
                     return (
-                      <div>
+                      <div key={link?.ID}>
                         LINK
                       </div>
                     )
                   }) : null}
                 </div>
-              </div>
+              </RoughCard>
             )
           })}
         </div>
