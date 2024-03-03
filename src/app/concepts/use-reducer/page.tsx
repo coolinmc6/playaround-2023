@@ -31,7 +31,7 @@ export default function UseReducerHome () {
       <FinalApp />
       <NotesSection>
         <p className="pb-4">
-          A quick couple notes on transitioning the <Code>useState</Code> to <Code>useReducer</Code>. First, it really wasn't
+          A quick couple notes on transitioning the <Code>useState</Code> to <Code>useReducer</Code>. First, it really wasn&apos;t
           that bad. Instead of directly changing the state you just call the reducer and it automatically updates state for
           you. For each condition of your switch statement, you just return the state that you want to update. Dispatch is 
           just the function that calls your reducer. It knows which part of the switch statement by the action you give it.
@@ -39,20 +39,20 @@ export default function UseReducerHome () {
         </p>
         <p className="pb-4">
           I can definitely see now the in-between stage of just using <Code>useState</Code> vs using Zustand or some other
-          global state manager. If you're making a lot of changes to state in a component but you <strong>don't really need</strong>
+          global state manager. If you&apos;re making a lot of changes to state in a component but you <strong>don&apos;t really need</strong>
           &nbsp;this information outside of this component, using <Code>useReducer</Code> would be useful.
         </p>
         <p className="pb-4">
           Even though I just put the reducer in the <Code>FinalApp.js</Code> file, if this was more important code I would definitely
-          move it to different file. Another benefit is that I didn't need to change the other two files. I am still using the exact
-          same handler functions, they're now just calling dispatch for the reducer to handle the state change.
+          move it to different file. Another benefit is that I didn&apos;t need to change the other two files. I am still using the exact
+          same handler functions, they&apos;re now just calling dispatch for the reducer to handle the state change.
         </p>
       </NotesSection>
       <h2 className="pb-4">My Example</h2>
       <ColinApp />
       <NotesSection>
         <p className="pb-4">
-          Implementing it was pretty easy. I didn't want to waste too much time building the UI but once you do a few of the cases it is pretty
+          Implementing it was pretty easy. I didn&apos;t want to waste too much time building the UI but once you do a few of the cases it is pretty
           easy to understand. Below is my basic implementation of the reducer.
         </p>
         <p className="pb-4">
@@ -60,7 +60,7 @@ export default function UseReducerHome () {
         </p>
       </NotesSection>
       <CodeBlock language="javascript">
-{`
+        {`
 type UserSettingsState = {
   name: string;
   email: string;
