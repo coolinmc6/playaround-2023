@@ -1,12 +1,13 @@
 import { ReactNode } from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'info' | 'warning' | 'danger' | 'success' | 'outlinePrimary' | 'outlineSecondary' | 'outlineInfo' | 'outlineWarning' | 'outlineDanger' | 'outlineSuccess';
-  size?: 'small' | 'medium' | 'large'; 
   block?: boolean;
-  loading?: boolean;
   children: ReactNode;
+  loading?: boolean;
   onClick?: () => void;
+  rootClassName?: string;
+  size?: 'small' | 'medium' | 'large'; 
+  variant?: 'primary' | 'secondary' | 'info' | 'warning' | 'danger' | 'success' | 'outlinePrimary' | 'outlineSecondary' | 'outlineInfo' | 'outlineWarning' | 'outlineDanger' | 'outlineSuccess';
 }
 
 const Button = ({ 
@@ -14,6 +15,7 @@ const Button = ({
   children,
   loading,
   onClick,
+  rootClassName = '',
   size = 'medium',
   variant = 'primary',
   ...rest
@@ -44,7 +46,7 @@ const Button = ({
   
   return (
     <button 
-      className={`${baseStyle} ${variantStyles[variant]} ${sizeStyles[size]} ${
+      className={`${baseStyle} ${variantStyles[variant]} ${sizeStyles[size]} ${rootClassName} ${
         block ? 'w-full' : ''
       }`}
       disabled={loading}
