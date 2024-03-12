@@ -1,14 +1,15 @@
 import React from 'react';
 
 type InputWithLabelProps = {
-  name: string;
-  label: string;
-  type?: string;
   inputClassName?: string;
+  label: string;
+  name: string;
   labelClassName?: string;
+  type?: string;
 }
 
 const InputWithLabel = ({ name, label, type = 'text', inputClassName, labelClassName }: InputWithLabelProps) => {
+  
 
   const inputElement = type === 'textarea' ? (
     <textarea
