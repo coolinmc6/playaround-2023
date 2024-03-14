@@ -17,5 +17,11 @@ export const parseFormData = (formData: FormData) => {
     }
   });
 
+  data.links = data.links.filter((link: any) => {
+    if (link['link-url']) {
+      return link;
+    }
+  })
+
   return data;
 }

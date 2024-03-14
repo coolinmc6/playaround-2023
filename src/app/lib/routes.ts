@@ -50,6 +50,7 @@ export let routes: Routes = {
   BLOG_TEST: { path: '/blog/pre-rendering', name: 'Blog Test', category: PERSONAL },
   LETTERS: { path: '/random/letters', name: 'Tracing Letters', category: PERSONAL },
   CALENDAR: { path: '/random/calendar', name: 'Calendar', category: PERSONAL },
+  GEOLOCATION: { path: '/random/geo-location', name: 'GeoLocation', category: PERSONAL },
   WORDLE: { path: '/random/wordle', name: 'Wordle', category: PERSONAL, divider: true },
 }
 

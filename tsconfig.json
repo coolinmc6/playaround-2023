@@ -16,6 +16,7 @@
       "@/*": ["./src/*"],
       "@store/*": ["./src/app/store/*"],
       "@core/*": ["./src/core/*"],
+      "@server/*": ["./server/*"],
     },
     "plugins": [
       {

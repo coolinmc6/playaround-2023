@@ -18,6 +18,40 @@ function generateRandomId(length = ID_LENGTH, prefix = 'id') {
   return prefix + '-' + result;
 }
 
+const convertLinks = (links) => {
+  // links: id,text,type,a_href,a_target,a_title,description
+  return links.map((link) => {
+    console.log(link)
+    return {
+      ...link,
+      text: link['link-title'],
+      type: link['link-type'],
+      a_href: link['link-url'],
+      a_target: '_blank',
+      a_title: link['link-title'],
+      description: link['link-description'],
+    }
+  })
+}
+
+const parseContent = (body) => {
+  return {
+    title: body?.title ?? '',
+    topic: body?.topic ?? '',
+    subtopic: body?.subtopic ?? '',
+    content1: body?.content1 ?? '',
+    content2: body?.content2 ?? '',
+    content3: body?.content3 ?? '',
+    content4: body?.content4 ?? '',
+    content5: body?.content5 ?? '',
+    content6: body?.content6 ?? '',
+    content7: body?.content7 ?? '',
+    content8: body?.content8 ?? '',
+    content9: body?.content9 ?? '',
+    content10: body?.content10 ?? '',
+  }
+}
+
 const port = 4000
 
 const object = {
@@ -55,32 +89,41 @@ app.get('/get-data', (req, res) => {
   })
 })
 
-app.post('/save-data', (req, res) => {
-  console.log('post request received')
-  console.log(req.body)
+// links: id,text,type,a_href,a_target,a_title,description
+// citations: id,text,link_id,paragraph_id,fact_id,comments
+// paragraphs: id,active,type,title,credit,topic,subtopic,content1,content2,content3,content4,content5,content6,content7,content8,content9,content10
 
+app.post('/save-data', (req, res) => {
+  const bodyContent = parseContent(req.body)
+  
   const content = [
     {
       id: generateRandomId(ID_LENGTH, 'cont'),
-      ...req.body.content
+      ...bodyContent
     }]
   csvWriter('content', content)
-
-  if (!req.body.links.url) {
+  
+  if (!req.body?.links[0]?.['link-url']) {
     res.send('Data saved')
     return
   }
-  const links = [
-    {
+  const links = convertLinks(req.body.links.map((link) => {
+    return {
       id: generateRandomId(ID_LENGTH, 'link'),
       target: '_blank',
-      ...req.body.links
-    }]
-  const citations = [{
-    id: generateRandomId(ID_LENGTH, 'cite'),
-    paragraph_id: content[0].id,
-    link_id: links[0].id,
-  }]
+      ...link,
+    }
+  }))
+
+  console.log({links})
+
+  const citations = links.map((link) => {
+    return {
+      id: generateRandomId(ID_LENGTH, 'cite'),
+      paragraph_id: content[0].id,
+      link_id: link.id,
+    }
+  })
   csvWriter('links', links)
   csvWriter('citations', citations)
 
