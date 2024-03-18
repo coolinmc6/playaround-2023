@@ -5,7 +5,8 @@ import { useLocalStorage } from '@/app/hooks/basic/useLocalStorage';
 import RoughCard from '@/core/RoughCard';
 
 const getLocalStorage = (key: string) => {
-  return localStorage.getItem(key);
+  if (typeof window === 'undefined') return;
+  return window.localStorage.getItem(key);
 }
 
 const UseLocalStorageExample = () => {

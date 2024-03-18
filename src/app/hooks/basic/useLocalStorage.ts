@@ -3,15 +3,29 @@
 import { useState, useEffect } from 'react';
 
 const getLocalStorageItem = (key: string, initialValue: any) => {
-  const savedValue = JSON.parse(localStorage.getItem(key) as string);
-  if (savedValue) return savedValue;
+  try {
 
-  if (initialValue instanceof Function) return initialValue();
-  return initialValue;
+    if (typeof window === 'undefined') return initialValue;
+    console.log(!!window, !!window.localStorage)
+    const savedValue = JSON.parse(window.localStorage.getItem(key) as string);
+    if (savedValue) return savedValue;
+  
+    if (initialValue instanceof Function) return initialValue();
+    return initialValue;
+  } catch (error) {
+    console.error(error);
+    return initialValue;
+  }
 }
 
 const saveLocalStorageItem = (key: string, value: any) => {
-  localStorage.setItem(key, JSON.stringify(value));
+  try {
+
+    if (typeof window === 'undefined') return;
+    window.localStorage.setItem(key, JSON.stringify(value));
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 export const useLocalStorage = (key: string, initialValue: any) => {

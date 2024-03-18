@@ -12,8 +12,6 @@ type Post = {
   content: string;
 }
 
-// console.log(process.cwd())
-
 export function getSortedPostsData () {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
@@ -52,9 +50,7 @@ export function getPostData (id: string) {
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
-  // console.log(fileContents)
 
-  // console.log('matterResult: ', matterResult.data)
 
   // Combine the data with the id
   return {
@@ -65,8 +61,6 @@ export function getPostData (id: string) {
 }
 
 export function getAllPostIds () {
-  // console.log(process.cwd())
-  // console.log(postsDirectory)
   // return [
   //   { id: 123, title: 'First Post', date: '2021-01-01'}
   // ]

@@ -1,11 +1,13 @@
 /**
  * This hook is used to get the user's current location.
  */
-
+// https://www.youtube.com/watch?v=J4PDxTO3oj0
 import React, { useState } from 'react';
 
 export const useGeolocation = () => {
   const [location, setLocation] = useState<GeolocationCoordinates | undefined>();
+
+  // navigator.permissions.query({ name: 'geolocation' }).then((result) => {})
 
   const onSuccess = (location: GeolocationPosition) => {
     setLocation(location.coords);
