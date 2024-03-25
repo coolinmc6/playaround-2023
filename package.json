@@ -45,7 +45,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-essentials": "^8.0.4",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
     "@storybook/addon-onboarding": "^1.0.11",
