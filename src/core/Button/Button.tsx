@@ -1,13 +1,18 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   block?: boolean;
   children: ReactNode;
   loading?: boolean;
   onClick?: () => void;
+  randomColor?: boolean;
   rootClassName?: string;
   size?: 'small' | 'medium' | 'large'; 
   variant?: 'primary' | 'secondary' | 'info' | 'warning' | 'danger' | 'success' | 'outlinePrimary' | 'outlineSecondary' | 'outlineInfo' | 'outlineWarning' | 'outlineDanger' | 'outlineSuccess';
+}
+
+function generateRandomHexColor() {
+  return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16).padStart(6, '0');
 }
 
 const Button = ({ 
@@ -15,11 +20,19 @@ const Button = ({
   children,
   loading,
   onClick,
+  randomColor = false,
   rootClassName = '',
   size = 'medium',
   variant = 'primary',
   ...rest
 }: ButtonProps) => {
+  const [randomColorStyle, setRandomColorStyle] = useState({});
+
+  useEffect(() => {
+    if (randomColor) {
+      setRandomColorStyle({ backgroundColor: generateRandomHexColor() });
+    }
+  }, [randomColor])
 
   const baseStyle = 'items-center justify-center rounded font-medium';
 
@@ -51,6 +64,7 @@ const Button = ({
       }`}
       disabled={loading}
       onClick={onClick}
+      style={randomColorStyle}
       {...rest}
     >
       {children}
