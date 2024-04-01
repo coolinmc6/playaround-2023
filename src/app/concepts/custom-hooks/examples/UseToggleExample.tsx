@@ -20,7 +20,7 @@ const UseToggleExample = () => {
       <p className="mb-2">
         My <Code>useToggle</Code> hook works pretty well. I am comparing it to a similar hook I found elsewhere
         just to see if I could do it. One issue was the error I got from TypeScript. Even though I know
-        that it&apos; tuple that I&apos;m returning, TypeScript does&apost. So I had to type the return value
+        that I&apos;m returning a tuple, TypeScript doesn&apos;t. So I had to type the return value
         which was a fun little exercise. This is what it looks like:
       </p>
       <CodeBlock language="javascript">
