@@ -1,0 +1,1023 @@
+{
+  "version": "1.0.0",
+  "domainsSkills": [
+    {
+      "domain": "Code Fluency",
+      "domainDescription": "The ability to write high-quality code that is easy to understand, maintain and change. It involves a strong understanding of programming languages and practices, as well as the ability to apply this knowledge to solve problems efficiently. Included in this skill is also the ability to proficiently read code.",
+      "allSkills": [],
+      "level1Skills": [
+        {
+          "text": "Produces working code that is simple, readable and maintainable",
+          "level": 1,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-1-skill-1"
+        },
+        {
+          "text": "Demonstrates through code a solid understanding of the features of the team’s commonly used language(s) or platform",
+          "level": 1,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-1-skill-2"
+        },
+        {
+          "text": "Demonstrates through code a solid understanding of data store modelling and query writing",
+          "level": 1,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-1-skill-3"
+        },
+        {
+          "text": "Demonstrates through code a solid understanding of end-user design (e.g. UI/UX, APIs, tooling)",
+          "level": 1,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-1-skill-4"
+        },
+        {
+          "text": "Adhere’s to the explicitly and implicitly defined code patterns of a codebase",
+          "level": 1,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-1-skill-5"
+        },
+        {
+          "text": "Defaults to using existing code patterns and conventions over creating new ones",
+          "level": 1,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-1-skill-6"
+        },
+        {
+          "text": "Avoids over-engineering; implements only the required functionality; YAGNI; Worse is Better",
+          "level": 1,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-1-skill-7"
+        },
+        {
+          "text": "Identifies and elegantly handles edge cases",
+          "level": 1,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-1-skill-8"
+        },
+        {
+          "text": "Proficient with developer tools (e.g. IDE, editor, command line)",
+          "level": 1,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-1-skill-9"
+        }
+      ],
+      "level3Skills": [
+        {
+          "text": "Structures code so it can be easily changed and tested without negatively impacting readability",
+          "level": 3,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-3-skill-1"
+        },
+        {
+          "text": "Refrains from DRYing code until the proper abstraction emerges",
+          "level": 3,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-3-skill-2"
+        },
+        {
+          "text": "Well versed in advanced data store features, while only employing them when needed",
+          "level": 3,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-3-skill-3"
+        },
+        {
+          "text": "Codes confidently, comprehending the cause of both existing behaviour and their modifications to it",
+          "level": 3,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-3-skill-4"
+        },
+        {
+          "text": "Quickly ramps up on technology new to them (e.g. languages, databases, event streams, cloud services)",
+          "level": 3,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-3-skill-5"
+        },
+        {
+          "text": "Produces code that scales, in terms of performance, to long-term workloads and data volumes",
+          "level": 3,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-3-skill-6"
+        },
+        {
+          "text": "Incorporates new abstractions and patterns (when needed) through prototypes and gaining team buy-in",
+          "level": 3,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-3-skill-7"
+        },
+        {
+          "text": "Enhances the security profile of a codebase via code changes in order to mitigate security risks",
+          "level": 3,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-3-skill-8"
+        }
+      ],
+      "level5Skills": [
+        {
+          "text": "Has a track record across engineering of writing resilient code that is bug-free and disruption-free",
+          "level": 5,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-5-skill-1"
+        },
+        {
+          "text": "Effortlessly produces working prototypes for developers who are stuck on complex coding problems",
+          "level": 5,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-5-skill-2"
+        },
+        {
+          "text": "Capable of meaningful contributions to convoluted framework, library, or language code within days of exposure",
+          "level": 5,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-5-skill-3"
+        },
+        {
+          "text": "Inspires the organization to improve their ability to learn and contribute to unfamiliar codebases",
+          "level": 5,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-5-skill-4"
+        },
+        {
+          "text": "Wrote or heavily contributed to a programming language",
+          "level": 5,
+          "domain": "Code Fluency",
+          "id": "code-fluency-level-5-skill-5"
+        }
+      ]
+    },
+    {
+      "domain": "Code Evaluation",
+      "domainDescription": "The ability to assess and provide feedback on the quality and functionality of code. It is demonstrated during formal code review and informal knowledge sharing.",
+      "allSkills": [],
+      "level1Skills": [
+        {
+          "text": "Respectful with all comments in pull requests and technical documents",
+          "level": 1,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-1-skill-1"
+        },
+        {
+          "text": "Enables developers to review their code through good pull request hygiene (e.g. well-scoped pull request, logical commits, good pull request description)",
+          "level": 1,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-1-skill-2"
+        },
+        {
+          "text": "Responsive when addressing feedback provided in pull requests",
+          "level": 1,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-1-skill-3"
+        },
+        {
+          "text": "Ensures all identified acceptance criteria has been met before requesting initial reviews",
+          "level": 1,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-1-skill-4"
+        },
+        {
+          "text": "Ensures all identified acceptance criteria has been met when reviewing code",
+          "level": 1,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-1-skill-5"
+        },
+        {
+          "text": "Demonstrates an effort to provide code review feedback over providing blind approvals",
+          "level": 1,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-1-skill-6"
+        },
+        {
+          "text": "Provides constructive and clear feedback when reviewing code",
+          "level": 1,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-1-skill-7"
+        },
+        {
+          "text": "Treats tests as first-class citizens during code review to ensure readability and that there are no gaps",
+          "level": 1,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-1-skill-8"
+        },
+        {
+          "text": "Highlights code that strays from codebase conventions during code review",
+          "level": 1,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-1-skill-9"
+        },
+        {
+          "text": "Proficient with version control tools (e.g. branch management)",
+          "level": 1,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-1-skill-10"
+        }
+      ],
+      "level3Skills": [
+        {
+          "text": "Quick to review and re-review code and technical documents",
+          "level": 3,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-3-skill-1"
+        },
+        {
+          "text": "Identifies and raises overlooked edge cases, constraints and limitations (e.g. technical, regulatory) during code review",
+          "level": 3,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-3-skill-2"
+        },
+        {
+          "text": "Identifies performance issues in pull requests and technical documents (e.g. missing database index, excessive calls to a service, execution on main vs background thread)",
+          "level": 3,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-3-skill-3"
+        },
+        {
+          "text": "Provides constructive code reviews by including relevant links, examples of alternate solutions and code suggestions",
+          "level": 3,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-3-skill-4"
+        },
+        {
+          "text": "Enforces secure coding practices (e.g. OWASP, promptly patching security vulnerabilities) by providing relevant information and feedback",
+          "level": 3,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-3-skill-5"
+        },
+        {
+          "text": "Reduces the amount of questions asked in code reviews by getting answers themselves (e.g. running pull requests locally) and sharing the answers",
+          "level": 3,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-3-skill-6"
+        },
+        {
+          "text": "Proactively communicates team feedback and requirements to code owners",
+          "level": 3,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-3-skill-7"
+        },
+        {
+          "text": "Reduces recurring code review comments by automating or documenting them away",
+          "level": 3,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-3-skill-8"
+        },
+        {
+          "text": "Contributes to code not directly in the scope of the team via both code review and code contributions",
+          "level": 3,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-3-skill-9"
+        }
+      ],
+      "level5Skills": [
+        {
+          "text": "A paragon and innovator in regards to enabling developers to review the code they authored (e.g. preparatory pull requests, explanations of technical concepts)",
+          "level": 5,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-5-skill-1"
+        },
+        {
+          "text": "Masterfully mediates disagreements on technical decisions using the trust and respect the parties have for the individual",
+          "level": 5,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-5-skill-2"
+        },
+        {
+          "text": "Promotes a culture of proactive code sharing across the organization to maximize the benefits for all teams",
+          "level": 5,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-5-skill-3"
+        },
+        {
+          "text": "Fosters a culture of rigorous security examination of code and architecture changes as a way of promoting the prevention of vulnerabilities",
+          "level": 5,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-5-skill-4"
+        },
+        {
+          "text": "Considerably reduces the time spent reviewing code in the company without impacting code quality by championing cutting-edge processes, or technology such as AI",
+          "level": 5,
+          "domain": "Code Evaluation",
+          "id": "code-evaluation-level-5-skill-5"
+        }
+      ]
+    },
+    {
+      "domain": "Code Stewardship",
+      "domainDescription": "The practice of maintaining code throughout its lifecycle, ensuring it is reliable and secure. Aspects of code stewardship can be seen in code review, testing, CI/CD processes and documentation.",
+      "allSkills": [],
+      "level1Skills": [
+        {
+          "text": "Identities and drives the work for updating dependencies",
+          "level": 1,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-1-skill-1"
+        },
+        {
+          "text": "Ensures all their code changes include clearly readable and maintainable code and also include Class/File comments, function comments and logic comments when necessary.",
+          "level": 1,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-1-skill-2"
+        },
+        {
+          "text": "Ensures code changes don’t decrease the quality of the codebase or impact the developer experience for other team members (e.g. increasing test or CI runtimes, build times) and optimize them when necessary.",
+          "level": 1,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-1-skill-3"
+        },
+        {
+          "text": "Writes or maintains the onboarding material (e.g. Confluence, OpsLevel, README) for their codebase or the feature they have worked on",
+          "level": 1,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-1-skill-4"
+        },
+        {
+          "text": "Actively identifies performance issues or tech debt and communicates these items to a broader audience",
+          "level": 1,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-1-skill-5"
+        },
+        {
+          "text": "Refactors existing code that is inconsistent with the patterns of the codebase",
+          "level": 1,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-1-skill-6"
+        },
+        {
+          "text": "Ensuring codebase meets eng-wide standards (e.g. passing OpsLevel checks, proactively implementing standards that were discussed eng-wide)",
+          "level": 1,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-1-skill-7"
+        }
+      ],
+      "level3Skills": [
+        {
+          "text": "Participates in internal knowledge sharing sessions related to development (e.g. demo days, lunch & learns, etc.)",
+          "level": 3,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-3-skill-1"
+        },
+        {
+          "text": "Aware of and proactively incorporates new language, library and framework features soon after they are released",
+          "level": 3,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-3-skill-2"
+        },
+        {
+          "text": "Ensures everyone’s contributions to codebases do not unnecessarily increase build, startup and execution/run times",
+          "level": 3,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-3-skill-3"
+        },
+        {
+          "text": "Leads refactors of their team's existing code that is inconsistent with the patterns of the codebase, code standards or to better leverage new design patterns",
+          "level": 3,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-3-skill-4"
+        },
+        {
+          "text": "Responsibly leads investigations on adding a new dependency by evaluating the need for it, alternate options, licenses, testing and documentation, all while while keeping teams informed",
+          "level": 3,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-3-skill-5"
+        },
+        {
+          "text": "Leads the investigation for the need of new dependency when needed through thorough investigation POC, learning sessions for teams a",
+          "level": 3,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-3-skill-6"
+        },
+        {
+          "text": "Leads both code and test dependency updates that requires major refactors across the codebase to adopt latest versions",
+          "level": 3,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-3-skill-7"
+        },
+        {
+          "text": "Helps define and maintain standards around coding practices across all teams",
+          "level": 3,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-3-skill-8"
+        },
+        {
+          "text": "Takes initiative to champion out-of-scope tech debt work surfaced in pull requests",
+          "level": 3,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-3-skill-9"
+        }
+      ],
+      "level5Skills": [
+        {
+          "text": "Actively coaches/mentors developers on other teams about maintaining code and ensuring standards are actively followed",
+          "level": 5,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-5-skill-1"
+        },
+        {
+          "text": "Builds and maintains tools/processes that enforce consistency across the organization which helps reduce the feedback cycle and increase/improves velocity across teams (related to OpsLevel, linters, CI, etc.)",
+          "level": 5,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-5-skill-2"
+        },
+        {
+          "text": "Participates and presents in conference talks on code stewardship",
+          "level": 5,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-5-skill-3"
+        },
+        {
+          "text": "Helps maintain and contribute to Open Source Software we are heavily dependent on (e.g. Apollo)",
+          "level": 5,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-5-skill-4"
+        },
+        {
+          "text": "Wrote or heavily contributed to a well-known tool in the industry which enforce and educate on best practices.",
+          "level": 5,
+          "domain": "Code Stewardship",
+          "id": "code-stewardship-level-5-skill-5"
+        }
+      ]
+    },
+    {
+      "domain": "System & Code Architecture",
+      "domainDescription": "The ability to design, articulate, evaluate and implement system and code architecture practices that improves various elements of the system and meets business objectives.",
+      "allSkills": [],
+      "level1Skills": [
+        {
+          "text": "Demonstrates awareness of commonly known failure patterns (e.g. N+1 query problem, missing db indexes, race conditions)",
+          "level": 1,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-1-skill-1"
+        },
+        {
+          "text": "Knows when to use common coding patterns (e.g. SOLID principles, MVC/MVVC/MVVM design approaches, factory, observer)",
+          "level": 1,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-1-skill-2"
+        },
+        {
+          "text": "Stays informed on and implements language best practices and tooling (e.g. linters, static code analyzers)",
+          "level": 1,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-1-skill-3"
+        },
+        {
+          "text": "Identifies gaps or limitations in the existing code/system architecture",
+          "level": 1,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-1-skill-4"
+        },
+        {
+          "text": "Builds solutions with system, resource, or device constraints in mind (e.g. CPU, memory, disk, network)",
+          "level": 1,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-1-skill-5"
+        },
+        {
+          "text": "Makes code changes in an isolated way to minimize downstream effects",
+          "level": 1,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-1-skill-6"
+        },
+        {
+          "text": "Promotes consistency at services' boundaries",
+          "level": 1,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-1-skill-7"
+        }
+      ],
+      "level3Skills": [
+        {
+          "text": "Proactively seeks to inform downstream or dependent teams of proposed code changes",
+          "level": 3,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-3-skill-1"
+        },
+        {
+          "text": "Introduces new code patterns or variations when common code patterns don’t fit the solution",
+          "level": 3,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-3-skill-2"
+        },
+        {
+          "text": "Garners adoption of architectural changes and sees them to completion",
+          "level": 3,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-3-skill-3"
+        },
+        {
+          "text": "Demonstrates knowledge and application of current and new architectural components and when to use them (e.g. lambda architecture, micro service architecture, CQRS, new industry leading products, services)",
+          "level": 3,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-3-skill-4"
+        },
+        {
+          "text": "Introduces simple solutions to meet the customer, business, product and technology needs with available resources and other constraints; avoids over-engineering",
+          "level": 3,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-3-skill-5"
+        },
+        {
+          "text": "Demonstrates knowledge of and articulates solutions for common failure modes in distributed computing, how they occur and how to mitigate them (e.g. thundering herds, partial service degradations, network partitions, queue back pressure, randomized backoff retries, dead-letter queueing)",
+          "level": 3,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-3-skill-6"
+        },
+        {
+          "text": "Responsibly adds features by introducing feature flags or other toggles to enable or disable functionality without requiring code deployments and minimizing negative user impact",
+          "level": 3,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-3-skill-7"
+        },
+        {
+          "text": "Responsibly introduces coupling between codependent features or services (e.g. always assume your downstream service is misbehaving, or is undergoing a deployment, or is otherwise unavailable)",
+          "level": 3,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-3-skill-8"
+        },
+        {
+          "text": "Enables the team to have smooth releases/deployments (e.g. minimizing downtime, having a rollback plan)",
+          "level": 3,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-3-skill-9"
+        }
+      ],
+      "level5Skills": [
+        {
+          "text": "Evaluates external solutions versus building in-house solutions and provides insightful strategy and recommendations",
+          "level": 5,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-5-skill-1"
+        },
+        {
+          "text": "Acts as a custodian of large architectural or code changes with a philosophy of maintainability, performance and scalability that impacts several systems",
+          "level": 5,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-5-skill-2"
+        },
+        {
+          "text": "Diligently and carefully curates engineering code or infrastructure changes in a way to maximize business impacts across services or teams",
+          "level": 5,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-5-skill-3"
+        },
+        {
+          "text": "Masterfully articulates the trade-offs of using specific patterns vs other approaches and their long term and wholistic impacts to the wider engineering team, product and business (e.g produces detailed and accurate documentation, Incorporates metrics, portrays financial, business and user impacts)",
+          "level": 5,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-5-skill-4"
+        },
+        {
+          "text": "Invents, implements and publishes new system architectures or code patterns that are widely adopted in the organization and or other companies",
+          "level": 5,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-5-skill-5"
+        },
+        {
+          "text": "Governs and makes core engineering wide system architecture decisions while incorporating long term technology goals, industry trends and strategic business objectives",
+          "level": 5,
+          "domain": "System & Code Architecture",
+          "id": "system-&-code-architecture-level-5-skill-6"
+        }
+      ]
+    },
+    {
+      "domain": "Testing",
+      "domainDescription": "The process of evaluating software to determine whether or not it satisfies the specified requirements.",
+      "allSkills": [],
+      "level1Skills": [
+        {
+          "text": "Code contributions contain reliable and isolated unit tests",
+          "level": 1,
+          "domain": "Testing",
+          "id": "testing-level-1-skill-1"
+        },
+        {
+          "text": "Adds test cases to verify bug fixes",
+          "level": 1,
+          "domain": "Testing",
+          "id": "testing-level-1-skill-2"
+        },
+        {
+          "text": "Manually tests all changes locally or on the test device before merging",
+          "level": 1,
+          "domain": "Testing",
+          "id": "testing-level-1-skill-3"
+        },
+        {
+          "text": "Ensures edge cases are covered in tests",
+          "level": 1,
+          "domain": "Testing",
+          "id": "testing-level-1-skill-4"
+        },
+        {
+          "text": "Writes test(s) and test descriptions that serve as a form of documentation",
+          "level": 1,
+          "domain": "Testing",
+          "id": "testing-level-1-skill-5"
+        },
+        {
+          "text": "Demonstrates writing the full range of tests, including: unit, integration and system tests",
+          "level": 1,
+          "domain": "Testing",
+          "id": "testing-level-1-skill-6"
+        },
+        {
+          "text": "Includes coverage for all applicable platforms and device configurations when writing tests",
+          "level": 1,
+          "domain": "Testing",
+          "id": "testing-level-1-skill-7"
+        }
+      ],
+      "level3Skills": [
+        {
+          "text": "Proactively ensures the performance of the tests suite components (e.g. build, execution and CI/CD) remains adequate",
+          "level": 3,
+          "domain": "Testing",
+          "id": "testing-level-3-skill-1"
+        },
+        {
+          "text": "Proactively ensures no flaky (unreliable or non-deterministic) tests are merged. Flags the flaky tests and helps fix them",
+          "level": 3,
+          "domain": "Testing",
+          "id": "testing-level-3-skill-2"
+        },
+        {
+          "text": "Utilizes and recommends best testing practices (e.g. writing isolated and well-scoped tests, avoiding sleeping) ",
+          "level": 3,
+          "domain": "Testing",
+          "id": "testing-level-3-skill-3"
+        },
+        {
+          "text": "Builds out reusable, parameterized test cases",
+          "level": 3,
+          "domain": "Testing",
+          "id": "testing-level-3-skill-4"
+        },
+        {
+          "text": "Identifies and closes existing gaps in tests",
+          "level": 3,
+          "domain": "Testing",
+          "id": "testing-level-3-skill-5"
+        },
+        {
+          "text": "Prepares training materials, coach and mentors developers about new techniques, ways to write fast, reliable and accurate tests",
+          "level": 3,
+          "domain": "Testing",
+          "id": "testing-level-3-skill-6"
+        }
+      ],
+      "level5Skills": [
+        {
+          "text": "Identifies, recommends and evaluates new testing frameworks with training materials and prototypes",
+          "level": 5,
+          "domain": "Testing",
+          "id": "testing-level-5-skill-1"
+        },
+        {
+          "text": "Establishes and promotes a testing first culture to help improve the overall quality and reliability of our products release over release",
+          "level": 5,
+          "domain": "Testing",
+          "id": "testing-level-5-skill-2"
+        },
+        {
+          "text": "Advocates for innovative testing practices and influences developer community to adopt new methods through presentations, blog posts, training sessions and conference talks",
+          "level": 5,
+          "domain": "Testing",
+          "id": "testing-level-5-skill-3"
+        },
+        {
+          "text": "Wrote or heavily contributed to a testing frameworks",
+          "level": 5,
+          "domain": "Testing",
+          "id": "testing-level-5-skill-4"
+        }
+      ]
+    },
+    {
+      "domain": "Debugging & Profiling",
+      "domainDescription": "The practice of identifying and diagnosing issues with software, ranging from bugs to performance issues.",
+      "allSkills": [],
+      "level1Skills": [
+        {
+          "text": "Adds meaningful log messages and follows existing logging standards",
+          "level": 1,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-1-skill-1"
+        },
+        {
+          "text": "Adds meaningful metrics, traces, and other telemetry using existing standards that can be utilized later in alarms and dashboards",
+          "level": 1,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-1-skill-2"
+        },
+        {
+          "text": "Leverages exception monitoring tools (like Bugsnag or Crashlytics) to fix bugs",
+          "level": 1,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-1-skill-3"
+        },
+        {
+          "text": "Comfortable with, and reaches for, debuggers and print-debugging to diagnose issues",
+          "level": 1,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-1-skill-4"
+        },
+        {
+          "text": "Familiar with, and uses when necessary, other debugging tools like view debuggers (i.e. Android Hierarchy Viewer, Reveal), debugging proxies (i.e. Charles Proxy), HTML inspectors (i.e. Chrome DevTools), runtime introspection tools (i.e. Erlang observer, Recon), etc.",
+          "level": 1,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-1-skill-5"
+        }
+      ],
+      "level3Skills": [
+        {
+          "text": "Implements load tests, performance tests, stress tests and/or benchmarks to validate the performance of the system",
+          "level": 3,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-3-skill-1"
+        },
+        {
+          "text": "Proficient with, and reaches for, code profiling tools (i.e. Instruments, Android Profiler) to diagnose performance issues",
+          "level": 3,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-3-skill-2"
+        },
+        {
+          "text": "Shares performance results and analysis with the immediate team to improve everyone’s understanding of the system",
+          "level": 3,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-3-skill-3"
+        },
+        {
+          "text": "Proactively identifies performance problems (e.g. missing database indexes, unnecessary queries/API calls, underperforming code, heavily contested locks) and works with the team to address them",
+          "level": 3,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-3-skill-4"
+        },
+        {
+          "text": "Diagnoses issues that span multiple components (e.g. frontend, backend, infrastructure)",
+          "level": 3,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-3-skill-5"
+        }
+      ],
+      "level5Skills": [
+        {
+          "text": "Evangelizes to developers about new debugging and profiling techniques or tools, leading to a cultural shift in the organization",
+          "level": 5,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-5-skill-1"
+        },
+        {
+          "text": "Publishes exceptional debugging/profiling related postmortems (à la Cloudflare) to theScore/Interactive tech blog",
+          "level": 5,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-5-skill-2"
+        },
+        {
+          "text": "Evolves debugging and profiling industry-wide by creating/contributing to existing tools/techniques",
+          "level": 5,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-5-skill-3"
+        },
+        {
+          "text": "Inspires wide-reaching improvements to the system by sharing performance results and analysis with the wider engineering organization",
+          "level": 5,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-5-skill-4"
+        },
+        {
+          "text": "Eliminates categories of bugs/performance issues in the organization via shared code, patterns, etc.",
+          "level": 5,
+          "domain": "Debugging & Profiling",
+          "id": "debugging-&-profiling-level-5-skill-5"
+        }
+      ]
+    },
+    {
+      "domain": "System Monitoring & Observability",
+      "domainDescription": "The ability to use tools and techniques to monitor the health of a system. It can be used to ensure the system is meeting expectations and to unlock insights regarding areas of improvement.",
+      "allSkills": [],
+      "level1Skills": [
+        {
+          "text": "Creates and updates dashboards for services and flows, using existing tools (e.g. Splunk and Datadog) and adding any interpretation instructions as needed",
+          "level": 1,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-1-skill-1"
+        },
+        {
+          "text": "Uses the most appropriate data sources when building dashboards and alerts",
+          "level": 1,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-1-skill-2"
+        },
+        {
+          "text": "Leverages the appropriate tool and data representation (e.g. charts, type of chart, organizing multiple data points or visualizations) to highlight the most important pieces",
+          "level": 1,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-1-skill-3"
+        },
+        {
+          "text": "Handles on-call incidents in a timely manner, escalating to senior team members and leadership when necessary",
+          "level": 1,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-1-skill-4"
+        },
+        {
+          "text": "Uses existing dashboards and metrics to diagnose system issues during an incident",
+          "level": 1,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-1-skill-5"
+        }
+      ],
+      "level3Skills": [
+        {
+          "text": "Proactively identifies and addresses monitoring and observability gaps in key application flows",
+          "level": 3,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-3-skill-1"
+        },
+        {
+          "text": "Leads continuous improvements to monitoring and observability across any systems they are familiar with",
+          "level": 3,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-3-skill-2"
+        },
+        {
+          "text": "Creates and maintains runbooks for new and existing features, including: why errors occur, where to look for logs and metrics and how to remediate issues without the need for escalation",
+          "level": 3,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-3-skill-3"
+        },
+        {
+          "text": "Builds dashboards for services and flows, adding any interpretation instructions as needed",
+          "level": 3,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-3-skill-4"
+        },
+        {
+          "text": "Has proven to be reliable with debugging and solutioning complex production incidents",
+          "level": 3,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-3-skill-5"
+        },
+        {
+          "text": "Facilitates proper production incident handling, coordinating the response, consulting with appropriate parties and keeping constant communication with stakeholders",
+          "level": 3,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-3-skill-6"
+        },
+        {
+          "text": "Champions the creation of Service Level Indicators (SLI), Objectives (SLO) and Agreements (SLA) for services according to their respective tier",
+          "level": 3,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-3-skill-7"
+        },
+        {
+          "text": "Champions the improvements necessary to ensure a high signal-to-noise ratio for alerts or other changes that would improve our ability to monitor our systems",
+          "level": 3,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-3-skill-8"
+        }
+      ],
+      "level5Skills": [
+        {
+          "text": "Leads the organization on evolving its monitoring and observability philosophy and skills (e.g. alerts strategy, how to proactively construct meaningful dashboards and alerts)",
+          "level": 5,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-5-skill-1"
+        },
+        {
+          "text": "Elevates the culture of the organization towards exceptional production incident handling, including follow-up hygiene and future-proof resolutions",
+          "level": 5,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-5-skill-2"
+        },
+        {
+          "text": "Creates or sets monitoring and observability standards that are adopted at other companies and across industries",
+          "level": 5,
+          "domain": "System Monitoring & Observability",
+          "id": "system-monitoring-&-observability-level-5-skill-3"
+        }
+      ]
+    },
+    {
+      "domain": "Technical Documentation",
+      "domainDescription": "The ability to clearly and accurately convey technical information through written, visual or verbal communication.",
+      "allSkills": [],
+      "level1Skills": [
+        {
+          "text": "Clearly and concisely documents code changes in Pull Request descriptions, wikis (e.g. Confluence) and code comments",
+          "level": 1,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-1-skill-1"
+        },
+        {
+          "text": "Clearly and concisely outlines changes to workflows and system design",
+          "level": 1,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-1-skill-2"
+        },
+        {
+          "text": "Produces content that is easily understood by other developers",
+          "level": 1,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-1-skill-3"
+        },
+        {
+          "text": "Adds the appropriate amount of context to documentation so it is easily understood by the target audience",
+          "level": 1,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-1-skill-4"
+        },
+        {
+          "text": "Demonstrates an understanding of different types of technical diagrams (e.g. sequence, ERDs, architecture)",
+          "level": 1,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-1-skill-5"
+        },
+        {
+          "text": "Creates and updates technical diagrams",
+          "level": 1,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-1-skill-6"
+        }
+      ],
+      "level3Skills": [
+        {
+          "text": "Proactively builds technical diagrams to further illustrate code or workflow changes, selecting appropriate diagrams for the concept being communicated",
+          "level": 3,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-3-skill-1"
+        },
+        {
+          "text": "Proactively documents critical system flows and concepts and keeps them up-to-date",
+          "level": 3,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-3-skill-2"
+        },
+        {
+          "text": "Creates complete technical spec documents, including relevant artifacts and cross-functional impacts",
+          "level": 3,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-3-skill-3"
+        },
+        {
+          "text": "Creates and reviews team and organization-wide RFCs",
+          "level": 3,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-3-skill-4"
+        },
+        {
+          "text": "Writes technical blog posts or articles for theScore/Interactive Tech Blog or other medium",
+          "level": 3,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-3-skill-5"
+        },
+        {
+          "text": "Identifies documentation gaps in the organization and champions changes",
+          "level": 3,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-3-skill-6"
+        },
+        {
+          "text": "Clearly and concisely documents and articulates complex technical concepts, changes and technical workflows to both technical and non-technical audiences",
+          "level": 3,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-3-skill-7"
+        },
+        {
+          "text": "Produces written documentation and technical artifacts that are suited for use by external parties such as regulators",
+          "level": 3,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-3-skill-8"
+        },
+        {
+          "text": "Ensures technical documentation is well structured and easily accessible by everyone in the organization",
+          "level": 3,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-3-skill-9"
+        }
+      ],
+      "level5Skills": [
+        {
+          "text": "Proactively keeps technical documentation organized and consolidated across the organization by identifying opportunities, making and championing changes across the organization and inspiring others to continue this effort",
+          "level": 5,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-5-skill-1"
+        },
+        {
+          "text": "Champions changes in organization-wide technical documentation culture, for example by facilitating training and knowledge sharing opportunities to address documentation skill gaps in the organization and to showcase the positive impact of technical documentation",
+          "level": 5,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-5-skill-2"
+        },
+        {
+          "text": "Is recognized as a prominent author of exceptional technical content in a written medium, commanding an audience (e.g. blog, book, newsletter)",
+          "level": 5,
+          "domain": "Technical Documentation",
+          "id": "technical-documentation-level-5-skill-3"
+        }
+      ]
+    }
+  ]
+}
