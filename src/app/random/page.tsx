@@ -5,6 +5,7 @@ import React from 'react';
 import MuiCard from '@/core/MuiCard';
 import { addToast } from '@store/toast';
 import { generateRandomId } from '@/app/lib/helpers'
+import KeyPad from '@/app/random/components/Keypad';
 
 export default function RandomHome () {
   const handleClick = () => {
@@ -13,6 +14,10 @@ export default function RandomHome () {
       message: 'You clicked the button!',
       id: generateRandomId(),
     })
+  }
+
+  const keyPadClick = (value: string) => {
+    console.log(value)
   }
   return (
     <div className="p-4">
@@ -26,6 +31,7 @@ export default function RandomHome () {
           <p>Click me to see what happens</p>
         </MuiCard.ActionArea>
       </MuiCard>
+      <KeyPad handleClick={keyPadClick} />
     </div>
   )
 }

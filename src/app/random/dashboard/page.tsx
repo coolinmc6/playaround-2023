@@ -1,12 +1,20 @@
 "use client"
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid, Card, List, ListItem, Text, Title } from '@tremor/react'
 import skillsJson from '@/app/random/dashboard/domain-skills.json'
 
 const skillsArray = skillsJson.domainsSkills
 const Dashboard = () => {
-  
+  const [selectedSkills, setSelectedSkills] = useState<string[]>([])
+
+  const handleClick = (skillId: string) => {
+    if (selectedSkills.includes(skillId)) {
+      setSelectedSkills(selectedSkills.filter((id) => id !== skillId))
+    } else {
+      setSelectedSkills([...selectedSkills, skillId])
+    }
+  }
   return (
     <div className="p-4 md:p-10 mx-auto max-w-7xl">
       <Title className="text-3xl mb-2">Skills Dashboard</Title>
@@ -20,8 +28,11 @@ const Dashboard = () => {
                 <Title>Level 1 Skills</Title>
                 <List>
                   {domain.level1Skills.map((skill) => {
+                    const selected = selectedSkills.includes(skill.id) ? 'bg-gray-50' : ''
                     return (
-                      <ListItem key={skill.id}>{skill.text}</ListItem>
+                      <ListItem key={skill.id} onClick={() => handleClick(skill.id)} className={selected}>
+                        <>{skill.text}</>
+                      </ListItem>
                     )
                   })}
                 </List>
@@ -31,7 +42,7 @@ const Dashboard = () => {
                 <List>
                   {domain.level3Skills.map((skill) => {
                     return (
-                      <ListItem key={skill.id}>{skill.text}</ListItem>
+                      <ListItem key={skill.id} onClick={() => handleClick(skill.id)}>{skill.text}</ListItem>
                     )
                   })}
                 </List>
@@ -41,7 +52,7 @@ const Dashboard = () => {
                 <List>
                   {domain.level5Skills.map((skill) => {
                     return (
-                      <ListItem key={skill.id}>{skill.text}</ListItem>
+                      <ListItem key={skill.id} onClick={() => handleClick(skill.id)}>{skill.text}</ListItem>
                     )
                   })}
                 </List>
