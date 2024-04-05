@@ -19,9 +19,9 @@ const KeyPad = ({ handleClick }: KeyPadProps) => {
       <button className={buttonClasses} onClick={() => handleClick('7')}>7</button>
       <button className={buttonClasses} onClick={() => handleClick('8')}>8</button>
       <button className={buttonClasses} onClick={() => handleClick('9')}>9</button>
-      <button className={buttonClasses} onClick={() => handleClick('*')}>*</button>
+      <button className={buttonClasses} onClick={() => handleClick('⌫')}>⌫</button>
       <button className={buttonClasses} onClick={() => handleClick('0')}>0</button>
-      <button className={buttonClasses} onClick={() => handleClick('#')}>#</button>
+      <button className={buttonClasses} onClick={() => handleClick('↩️')}>↩️</button>
     </div>
 
   )
