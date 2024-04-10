@@ -36,7 +36,7 @@ const allRoutes: Route[] = [
   DEV_TOOLS,
 ]
 
-export let routes: Routes = {
+export const routes: Routes = {
   HOME: { path: '/', name: 'Home', category: NAVIGATION, bold: true, divider: true },
 
   CONCEPTS: { path: '/concepts', name: 'Concepts Home', category: CONCEPTS, bold: true },
@@ -52,10 +52,11 @@ export let routes: Routes = {
   CALENDAR: { path: '/random/calendar', name: 'Calendar', category: PERSONAL },
   GEOLOCATION: { path: '/random/geo-location', name: 'GeoLocation', category: PERSONAL },
   WORDLE: { path: '/random/wordle', name: 'Wordle', category: PERSONAL, divider: true },
-}
+  DEV_TOOLS,
+} as const
 
-if (process.env.NEXT_PUBLIC_ENVIRONMENT === 'development') {
-  routes = { ...routes, DEV_TOOLS }
+if (process.env.NEXT_PUBLIC_ENVIRONMENT !== 'development') {
+  delete routes['DEV_TOOLS']
 }
 
 export const routesArray = Object.keys(routes).map((key) => routes[key])
