@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import MermaidChart from '@/core/MermaidChart';
+import Table from '@/core/Table';
 
 const graphDefinition = `
 graph TD 
@@ -38,21 +39,31 @@ block beta
   a[Square Rect] -->|Link text| b((Circle))
 `
 
-// mermaid.initialize({
-//   startOnLoad: true,
-//   theme: 'forest',
-// });
+const frontEndTechnology = [
+  { name: 'React', type: 'library', use: 'UI'},
+  { name: 'TypeScript', type: 'language', use: 'type checking'},
+  { name: 'JavaScript', type: 'language', use: 'ES6' },
+  { name: 'Tailwind CSS', type: 'library', use: 'styling' },
+  { name: 'Storybook', type: 'tool', use: 'component development' },
+  { name: 'Jest', type: 'tool', use: 'testing' },
+]
+
+const tableStyles = {
+  table: 'max-w-92'
+}
 
 const MermaidHome = () => {
-
-  useEffect(() => {
-    // mermaid.contentLoaded();
-  }, [])
-  
   return (
     <div>
-      <h1>Mermaid</h1>
-      <p>Mermaid page content</p>
+      <h1 className="text-2xl mb-6">Mermaid</h1>
+      <Table 
+        headerArray={['Name', 'Type', 'Use']}
+        data={frontEndTechnology} 
+        styles={tableStyles}
+      />
+
+      <hr />
+      <h2>Examples</h2>
       <MermaidChart graphDefinition={graphDefinition} hideRerenderButton={false} />
       <MermaidChart graphDefinition={graphDefinition2} hideRerenderButton={false} />
       {/* <MermaidChart graphDefinition={graphDefinition3} hideRerenderButton={false} /> */}

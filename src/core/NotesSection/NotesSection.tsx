@@ -2,7 +2,6 @@ import React from 'react';
 
 type NotesSectionProps = {
   children?: React.ReactNode;
-
 }
 
 const NotesSection = ({ children }: NotesSectionProps) => {

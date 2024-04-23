@@ -9,8 +9,6 @@ type InputWithLabelProps = {
 }
 
 const InputWithLabel = ({ name, label, type = 'text', inputClassName, labelClassName }: InputWithLabelProps) => {
-  
-
   const inputElement = type === 'textarea' ? (
     <textarea
       name={name}
