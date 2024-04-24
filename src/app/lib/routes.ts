@@ -32,6 +32,7 @@ export const allRoutes: Route[] = [
   { path: '/concepts/context/colin-context', name: 'Colin Context', category: CONCEPTS, bold: false },
   { path: '/concepts/context/context-and-reducer', name: 'Context and Reducer', category: CONCEPTS, bold: false },
   { path: '/concepts/context/single-page-context', name: 'Single Page Context', category: CONCEPTS, bold: false },
+  { path: '/concepts/context/context-01', name: 'Context #1', category: CONCEPTS, bold: false },
   { path: '/concepts/custom-hooks', name: 'Custom Hooks', category: CONCEPTS },
   { path: '/concepts/performance', name: 'Performance', category: CONCEPTS },
   { path: '/concepts/rendering', name: 'Rendering', category: CONCEPTS },
