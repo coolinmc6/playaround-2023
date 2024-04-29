@@ -9,7 +9,28 @@ export const checkIfDateIsToday = (dateString) => {
 }
 
 export const baseElements = {
-  fitness: [],
+  fitness: [
+    {
+      "name": "Daily Elliptical",
+      "checked": false,
+      "type": "fitness"
+    },
+    {
+      "name": "Daily Abs",
+      "checked": false,
+      "type": "fitness"
+    },
+    {
+      "name": "Daily Kettlebells",
+      "checked": false,
+      "type": "fitness"
+    },
+    {
+      "name": "Lift",
+      "checked": false,
+      "type": "fitness"
+    }
+  ],
   nutrition: [
     { name: 'baby carrots or vegetable serving', checked: false, type: 'nutrition' },
     {
@@ -33,7 +54,18 @@ export const baseElements = {
       "type": "nutrition"
     }
   ],
-  other: []
+  other: [
+    {
+      "name": "Weigh self to get baseline",
+      "checked": false,
+      "type": "other"
+    },
+    {
+      "name": "No food after 9pm",
+      "checked": false,
+      "type": "other"
+    }
+  ]
 }
 
 export const createBaseObject = () => {

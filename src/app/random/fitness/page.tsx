@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { loadFitnessData, saveFitnessData } from '@/services/requests';
 import { Card, Switch } from '@tremor/react';
 import { addToast } from '@/app/store/toast';
+import Badge from '@/core/Badge';
 
 type Item = {
   name: string;
@@ -69,25 +70,53 @@ function updateItem(baseState: FitnessEntry, update: Item): FitnessEntry {
   return newState;
 }
 
+const getBadgeType = (percentCompleted: number) => {
+  if (percentCompleted < 25) {
+    return 'danger';
+  } else if (percentCompleted < 50) {
+    return 'warning';
+  } else if (percentCompleted < 76) {
+    return 'warning';
+  } else {
+    return 'success';
+  }
+}
+
 const FitnessCard = ({ title, items, clickHandler }: FitnessCardProps) => {
   const handleSwitchClick = (item: Item) => () => {
     clickHandler(item);
   }
+
+  const itemsCompleted = items.filter(item => item.checked).length;
+  const itemsTotal = items.length;
+  const percentCompleted = itemsTotal ? Math.round((itemsCompleted / itemsTotal) * 100) : 0;
+  const badgeType = getBadgeType(percentCompleted);
   return (
-    <Card>
+    <Card className="relative">
       <h2 className="font-bold text-center text-xl mb-4">{title}</h2>
-      {items.length ? items.map((item) => {
-        return (
-          <div key={item.name} className="flex items-center justify-between">
-            <div className="flex-grow">
-              {item.name}
+      <span className="absolute top-2 right-2">
+        <Badge type={badgeType}>{percentCompleted}%</Badge>
+      </span>
+      <div>
+        {items.length ? items.map((item) => {
+          return (
+            <div key={item.name} className="flex items-center justify-between py-1">
+              <div className="flex-grow">
+                {item.name}
+              </div>
+              <div className="w-15">
+                <Switch checked={item.checked} onClick={handleSwitchClick(item)} />
+              </div>
             </div>
-            <div className="w-15">
-              <Switch checked={item.checked} onClick={handleSwitchClick(item)} />
-            </div>
-          </div>
-        )
-      }) : <p className="text-center">No items found</p>}
+          )
+        }) : <p className="text-center">No items found</p>}
+      </div>
+      <div className="mt-8">
+        <p className="text-center">{itemsCompleted} of {itemsTotal} completed</p>
+        <div className="bg-gray-200 h-2 rounded-full mt-2">
+          <div className="bg-blue-500 h-2 rounded-full" style={{ width: `${percentCompleted}%` }}></div>
+        </div>
+      </div>
     </Card>
   )
 }

@@ -16,7 +16,28 @@
     {
       "date": "2024-04-29T13:51:45.805Z",
       "data": {
-        "fitness": [],
+        "fitness": [
+          {
+            "name": "Daily Elliptical",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Abs",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Kettlebells",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Lift",
+            "checked": false,
+            "type": "fitness"
+          }
+        ],
         "nutrition": [
           {
             "name": "Baby carrots or vegetable serving",
@@ -30,7 +51,7 @@
           },
           {
             "name": "Log lunch into MyFitnessPal",
-            "checked": false,
+            "checked": true,
             "type": "nutrition"
           },
           {
@@ -40,11 +61,22 @@
           },
           {
             "name": "Log snacks into MyFitnessPal",
-            "checked": false,
+            "checked": true,
             "type": "nutrition"
           }
         ],
-        "other": []
+        "other": [
+          {
+            "name": "Weigh self to get baseline",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "No food after 9pm",
+            "checked": false,
+            "type": "other"
+          }
+        ]
       }
     }
   ]
