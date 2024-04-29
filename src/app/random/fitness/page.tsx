@@ -23,7 +23,7 @@ type FitnessEntry = {
   data: ElementTypes;
 }
 
-export const baseElements: ElementTypes = {
+const baseElements: ElementTypes = {
   fitness: [],
   nutrition: [],
   other: []
