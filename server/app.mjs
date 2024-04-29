@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { csvWriter, getAllData } from './csv-writer.mjs';
+import fitnessRouter from './routes/fitness.mjs'
 
 const app = express();
 app.use(express.json());
@@ -67,6 +68,9 @@ app.use((req, res, next) => {
   next();
 });
 
+// Fitness routes
+app.use('/fitness', fitnessRouter);
+
 app.get('/', (req, res) => {
   res.send(JSON.stringify(object))
 })
@@ -130,6 +134,8 @@ app.post('/save-data', (req, res) => {
 
   res.send('Data saved')
 })
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

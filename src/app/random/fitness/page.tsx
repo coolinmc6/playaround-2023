@@ -1,0 +1,146 @@
+"use client";
+
+import React, { useEffect, useState } from 'react';
+
+import { loadFitnessData, saveFitnessData } from '@/services/requests';
+import { Card, Switch } from '@tremor/react';
+import { addToast } from '@/app/store/toast';
+
+type Item = {
+  name: string;
+  checked: boolean;
+  type: 'nutrition' | 'fitness' | 'other';
+}
+
+type ElementTypes = {
+  fitness: Item[];
+  nutrition: Item[];
+  other: Item[];
+}
+
+type FitnessEntry = {
+  date: string;
+  data: ElementTypes;
+}
+
+export const baseElements: ElementTypes = {
+  fitness: [],
+  nutrition: [],
+  other: []
+}
+
+const baseEntry: FitnessEntry = {
+  date: new Date().toISOString(),
+  data: baseElements
+}
+
+
+type FitnessCardProps = {
+  title: string;
+  items: Item[];
+  clickHandler: (item: Item) => void;
+}
+
+function updateItem(baseState: FitnessEntry, update: Item): FitnessEntry {
+  // Copy the state to avoid direct mutation
+  const newState = {
+    date: baseState.date,
+    data: {
+      fitness: [...baseState.data.fitness],
+      nutrition: [...baseState.data.nutrition],
+      other: [...baseState.data.other]
+    }
+  };
+
+  // Determine which category to update based on the item type
+  const category = update.type;
+
+  // Find and update the item
+  const index = newState.data[category].findIndex(item => item.name === update.name);
+  if (index !== -1) {
+    newState.data[category][index] = { ...newState.data[category][index], ...update };
+  } else {
+    // Optionally handle the case where the item is not found; for now, we can add it
+    newState.data[category].push(update);
+  }
+
+  console.log(newState)
+
+  return newState;
+}
+
+const FitnessCard = ({ title, items, clickHandler }: FitnessCardProps) => {
+  const handleSwitchClick = (item: Item) => () => {
+    clickHandler(item);
+  }
+  return (
+    <Card>
+      <h2 className="font-bold text-center text-xl mb-4">{title}</h2>
+      {items.length ? items.map((item) => {
+        return (
+          <div key={item.name} className="flex items-center justify-between">
+            <div className="flex-grow">
+              {item.name}
+            </div>
+            <div className="w-15">
+              <Switch checked={item.checked} onClick={handleSwitchClick(item)} />
+            </div>
+          </div>
+        )
+      }) : <p className="text-center">No items found</p>}
+    </Card>
+  )
+}
+
+const Fitness = () => {
+  const [data, setData] = useState<FitnessEntry>(baseEntry)
+  console.log(baseEntry)
+
+  useEffect(() => {
+    loadFitnessData().then((res) => {
+      console.log(res.data)
+      setData(res.data)
+    }).catch((err) => {
+      console.log(err)
+    })
+  }, []);
+
+  const handleSwitchClick = (item: Item) => {
+    console.log(item)
+    item.checked = !item.checked;
+    const newData = updateItem(data, item);
+    setData(newData);
+
+    saveFitnessData(newData).then((res) => {
+      console.log(res)
+      addToast({
+        id: Math.random().toString(36).substring(7),
+        open: true,
+        severity: 'success',
+        message: 'Data saved successfully'
+      })
+    
+    }).catch(err => {
+      console.log(err)
+      addToast({
+        id: Math.random().toString(36).substring(7),
+        open: true,
+        severity: 'error',
+        message: 'Error saving data. Check if server is running.'
+      })
+    })
+  }
+
+  return (
+    <div className="min-h-screen p-12">
+      <h1 className="text-xl mb-2">Fitness</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <FitnessCard title="Nutrition" items={data.data.nutrition} clickHandler={handleSwitchClick} />
+        <FitnessCard title="Fitness" items={data.data.fitness} clickHandler={handleSwitchClick} />
+        <FitnessCard title="Other" items={data.data.other} clickHandler={handleSwitchClick} />
+      </div>
+    </div>
+  )
+}
+
+export default Fitness;

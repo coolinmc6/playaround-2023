@@ -1,0 +1,51 @@
+{
+  "entries": [
+    {
+      "date": "Fri Apr 26 2024 16:32:47 GMT-0400 (Eastern Daylight Time)",
+      "data": {
+        "fitness": [],
+        "nutrition": [
+          {
+            "name": "baby carrots or vegetable serving",
+            "checked": false
+          }
+        ],
+        "other": []
+      }
+    },
+    {
+      "date": "2024-04-29T13:51:45.805Z",
+      "data": {
+        "fitness": [],
+        "nutrition": [
+          {
+            "name": "Baby carrots or vegetable serving",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log breakfast into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log lunch into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log dinner into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log snacks into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          }
+        ],
+        "other": []
+      }
+    }
+  ]
+}
