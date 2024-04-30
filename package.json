@@ -45,13 +45,13 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.0.5",
-    "@storybook/addon-interactions": "^8.0.8",
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
     "@storybook/addon-onboarding": "^1.0.11",
-    "@storybook/blocks": "^8.0.4",
+    "@storybook/blocks": "^7.6.17",
     "@storybook/nextjs": "^7.6.17",
-    "@storybook/react": "^8.0.5",
+    "@storybook/react": "^7.6.17",
     "@storybook/test": "^7.6.17",
     "@swc/core": "^1.4.8",
     "@swc/jest": "^0.2.36",

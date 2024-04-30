@@ -19,14 +19,12 @@ const getAllData = async () => {
     object.todaysEntry = createBaseObject();
   } else {
     object.todaysEntry = todaysEntry[0];
-    console.log('is this hitting?')
   }
   return object;
 }
 
 const updateData = async (todaysEntry) => {
   const { data } = await getAllData();
-  console.log(todaysEntry)
   if (data.entries.some(entry => checkIfDateIsToday(entry.date))) {
     const updatedData = {
       ...data,
@@ -46,7 +44,6 @@ const updateData = async (todaysEntry) => {
         todaysEntry
       ]
     }
-    console.log(updatedData)
     await writeJsonFile(FITNESS_PATH, updatedData);
   }
   
@@ -57,7 +54,6 @@ router.get('/load-data', async (req, res) => {
   console.log('Loading data from fitness app')
   try {
     const { todaysEntry } = await getAllData();
-    console.log(todaysEntry)
     res.json(todaysEntry);
   } catch(error) {
     res.status(500).send('Error reading data file');

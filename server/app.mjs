@@ -22,7 +22,6 @@ function generateRandomId(length = ID_LENGTH, prefix = 'id') {
 const convertLinks = (links) => {
   // links: id,text,type,a_href,a_target,a_title,description
   return links.map((link) => {
-    console.log(link)
     return {
       ...link,
       text: link['link-title'],
@@ -76,19 +75,13 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  console.log('post request received')
-  console.log(req.originalUrl)
-  console.log(req.url)
-
   res.send('Data received')
 })
 
 app.get('/get-data', (req, res) => {
-  console.log('get request received')
   getAllData().then(data => {
     res.send(data)
   }).catch(err => {
-    console.log(err)
     res.status(500).send(err)
   })
 })

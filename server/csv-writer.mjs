@@ -1,6 +1,7 @@
 import fs from 'fs';
 import csvParser from 'csv-parser';
 import { createObjectCsvWriter } from 'csv-writer';
+import { nodeLogger } from './helpers.mjs'
 
 const contentPath = 'server/data/content.csv';
 const linksPath = 'server/data/links.csv';
@@ -90,7 +91,7 @@ const csvWriter = (type, data) => {
 
   return writer.writeRecords(data)
     .then(() => {
-      console.log(`${type}: Row was added to the CSV file`);
+      nodeLogger(`${type}: Row was added to the CSV file`);
     })
     .catch(err => {
       console.error(`${type}: Error writing to CSV file`, err);

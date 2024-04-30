@@ -65,7 +65,6 @@ function updateItem(baseState: FitnessEntry, update: Item): FitnessEntry {
     newState.data[category].push(update);
   }
 
-  console.log(newState)
 
   return newState;
 }
@@ -123,25 +122,25 @@ const FitnessCard = ({ title, items, clickHandler }: FitnessCardProps) => {
 
 const Fitness = () => {
   const [data, setData] = useState<FitnessEntry>(baseEntry)
-  console.log(baseEntry)
+  
 
   useEffect(() => {
     loadFitnessData().then((res) => {
-      console.log(res.data)
+      
       setData(res.data)
     }).catch((err) => {
-      console.log(err)
+      
     })
   }, []);
 
   const handleSwitchClick = (item: Item) => {
-    console.log(item)
+    
     item.checked = !item.checked;
     const newData = updateItem(data, item);
     setData(newData);
 
     saveFitnessData(newData).then((res) => {
-      console.log(res)
+      
       addToast({
         id: Math.random().toString(36).substring(7),
         open: true,
@@ -150,7 +149,7 @@ const Fitness = () => {
       })
     
     }).catch(err => {
-      console.log(err)
+      
       addToast({
         id: Math.random().toString(36).substring(7),
         open: true,
