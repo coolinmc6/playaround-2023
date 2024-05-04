@@ -64,6 +64,16 @@ export const baseElements = {
       "name": "No food after 9pm",
       "checked": false,
       "type": "other"
+    },
+    {
+      "name": "No alcohol",
+      "checked": false,
+      "type": "other"
+    },
+    {
+      "name": "Creatine",
+      "checked": false,
+      "type": "other"
     }
   ]
 }

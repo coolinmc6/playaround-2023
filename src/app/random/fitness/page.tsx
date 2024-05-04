@@ -110,7 +110,8 @@ const FitnessCard = ({ title, items, clickHandler }: FitnessCardProps) => {
           )
         }) : <p className="text-center">No items found</p>}
       </div>
-      <div className="mt-8">
+      <div className="m-12"></div>
+      <div className="mt-8 absolute bottom-0 left-0 w-full p-2">
         <p className="text-center">{itemsCompleted} of {itemsTotal} completed</p>
         <div className="bg-gray-200 h-2 rounded-full mt-2">
           <div className="bg-blue-500 h-2 rounded-full" style={{ width: `${percentCompleted}%` }}></div>
@@ -161,8 +162,7 @@ const Fitness = () => {
 
   return (
     <div className="min-h-screen p-12">
-      <h1 className="text-xl mb-2">Fitness</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
         <FitnessCard title="Nutrition" items={data.data.nutrition} clickHandler={handleSwitchClick} />
         <FitnessCard title="Fitness" items={data.data.fitness} clickHandler={handleSwitchClick} />
         <FitnessCard title="Other" items={data.data.other} clickHandler={handleSwitchClick} />
