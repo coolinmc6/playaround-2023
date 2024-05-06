@@ -2,20 +2,25 @@
 
 import React from 'react';
 import { useFitnessData } from '@/app/concepts/custom-hooks/hooks/useFitness';
-import { Card, ProgressCircle } from '@tremor/react';
+import { Card, List, ListItem, ProgressCircle } from '@tremor/react';
+import Badge from '@/core/Badge';
 
 type HighlightCardProps = {
   title: string;
   value: number;
   object: any;
+  badge: string;
 }
 
-const HighlightCard = ({ title, value, object }: HighlightCardProps) => {
+const HighlightCard = ({ title, value, object, badge }: HighlightCardProps) => {
   return (
     <Card className="grid grid-cols-3">
-      <div className="col-span-2">
-        <h3 className="text-4xl font-bold mb-2">{`${value}%`}</h3>
-        <h2 className="text-slate-500">{title.toUpperCase()}</h2>
+      <div className="col-span-2 relative h-full">
+        <div className="text-4xl font-bold mb-2">{`${value}%`}</div>
+        <div className="text-slate-500">{title.toUpperCase()}</div>
+        <span className="absolute -bottom-4 -left-2">
+          <Badge type="info" >{badge}</Badge>
+        </span>
       </div>
       <ProgressCircle value={value} size="lg">
         <div>{object.completed} of {object.total}</div>
@@ -25,25 +30,55 @@ const HighlightCard = ({ title, value, object }: HighlightCardProps) => {
 
 }
 
+/*
+Items to Build:
+- calendar - progress each day
+- Charts
+- Totals by Type
+*/
+
+const smallCardBaseRow = "grid grid-cols-3 gap-4 p-4"
 const FitnessPublic = () => {
 
-  const { refined } = useFitnessData();
+  const { refined, dailyHighlightCards } = useFitnessData();
+  console.log(dailyHighlightCards)
   const { fitness, nutrition, other } = refined.totalsByType
-  const types = [fitness, nutrition, other]
+  const totals = [fitness, nutrition, other]
+  const dailies = [dailyHighlightCards.dailyTotalByType.fitness, dailyHighlightCards.dailyTotalByType.nutrition, dailyHighlightCards.dailyTotalByType.other]
   return (
     <div>
-      <ul>
-        <li>Calendar</li>
-        <li>Totals</li>
-        <li>Charts: https://www.tremor.so/docs/visualizations/bar-chart</li>
-        <li>Update hook to generate stats</li>
-      </ul>
-      <div className="grid grid-cols-3 gap-4 p-4">
-        {types.map((type) => {
+      <div className={smallCardBaseRow}>
+        {dailies.map((total) => {
+            return (
+              <HighlightCard 
+                badge="Today"
+                object={total}
+                title={total.type}
+                value={total.percentage}
+              />
+            )
+          })}
+      </div>
+      <div className={smallCardBaseRow}>
+        {totals.map((total) => {
           return (
-            <HighlightCard title={type.type} value={type.percentage} object={type} />
+            <HighlightCard 
+              badge="All Time"
+              object={total}
+              title={total.type}
+              value={total.percentage}
+            />
           )
         })}
+      </div>
+      <div className={smallCardBaseRow}>
+        <Card className="break-words">
+          <List>
+            <ListItem>Spark Chart</ListItem>
+            <ListItem>Daily completion for each of fitness, nutrition, other</ListItem>
+            <ListItem className="break-words">https://www.tremor.so/docs/visualizations/spark-charts</ListItem>
+          </List>
+        </Card>
       </div>
     </div>
   );

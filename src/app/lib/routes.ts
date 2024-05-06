@@ -21,8 +21,8 @@ type Category = typeof CONCEPTS | typeof PERSONAL | typeof NAVIGATION
 const hiddenRoutes = ['DEV_TOOLS', 'MERMAID', 'FITNESS']
 const DEV_TOOLS: Route = { path: '/dev-tools', name: 'Dev Tools', category: NAVIGATION, bold: true }
 const MERMAID: Route = { path: '/random/mermaid', name: 'Mermaid', category: NAVIGATION }
-const FITNESS: Route = { path: '/random/fitness', name: 'Fitness', category: PERSONAL }
-
+const FITNESS: Route = { path: '/random/fitness', name: 'Fitness Logging', category: PERSONAL }
+const FITNESS_PUBLIC: Route = { path: '/random/fitness/public', name: 'Fitness', category: PERSONAL }
 
 
 export const allRoutes: Route[] = [
@@ -40,7 +40,8 @@ export const allRoutes: Route[] = [
   { path: '/concepts/use-reducer', name: 'Use Reducer', category: CONCEPTS, divider: true },
   { path: '/random', name: 'Random Home', category: PERSONAL, bold: true },
   { path: '/random/calendar', name: 'Calendar', category: PERSONAL },
-  { path: '/random/fitness', name: 'Fitness', category: PERSONAL },
+  FITNESS,
+  FITNESS_PUBLIC,
   { path: '/random/letters', name: 'Tracing Letters', category: PERSONAL },
   { path: '/random/wordle', name: 'Wordle', category: PERSONAL, divider: true },
   DEV_TOOLS,
@@ -60,6 +61,7 @@ export const routes: Routes = {
   BLOG_TEST: { path: '/blog/pre-rendering', name: 'Blog Test', category: PERSONAL },
   CALENDAR: { path: '/random/calendar', name: 'Calendar', category: PERSONAL },
   FITNESS,
+  FITNESS_PUBLIC,
   GEOLOCATION: { path: '/random/geo-location', name: 'GeoLocation', category: PERSONAL },
   MERMAID,
   LETTERS: { path: '/random/letters', name: 'Tracing Letters', category: PERSONAL },
