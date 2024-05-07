@@ -6,6 +6,7 @@ import { loadFitnessData, saveFitnessData } from '@/services/requests';
 import { Card, Switch } from '@tremor/react';
 import { addToast } from '@/app/store/toast';
 import Badge from '@/core/Badge';
+import { getBadgeType } from '@/app/random/fitness/helpers';
 
 type Item = {
   name: string;
@@ -67,18 +68,6 @@ function updateItem(baseState: FitnessEntry, update: Item): FitnessEntry {
 
 
   return newState;
-}
-
-const getBadgeType = (percentCompleted: number) => {
-  if (percentCompleted < 25) {
-    return 'danger';
-  } else if (percentCompleted < 50) {
-    return 'warning';
-  } else if (percentCompleted < 76) {
-    return 'warning';
-  } else {
-    return 'success';
-  }
 }
 
 const FitnessCard = ({ title, items, clickHandler }: FitnessCardProps) => {

@@ -2,8 +2,11 @@
 
 import React from 'react';
 import { useFitnessData } from '@/app/concepts/custom-hooks/hooks/useFitness';
-import { Card, List, ListItem, ProgressCircle } from '@tremor/react';
+import { Card, List, ListItem, ProgressCircle, Tracker, type Color } from '@tremor/react';
 import Badge from '@/core/Badge';
+import { getProgressColor } from '@/app/random/fitness/helpers';
+
+// https://www.tremor.so/docs/getting-started/installation - finish tremor install
 
 type HighlightCardProps = {
   title: string;
@@ -22,7 +25,7 @@ const HighlightCard = ({ title, value, object, badge }: HighlightCardProps) => {
           <Badge type="info" >{badge}</Badge>
         </span>
       </div>
-      <ProgressCircle value={value} size="lg">
+      <ProgressCircle value={value} size="lg" color={getProgressColor(value)}>
         <div>{object.completed} of {object.total}</div>
       </ProgressCircle>
     </Card>
@@ -37,7 +40,7 @@ Items to Build:
 - Totals by Type
 */
 
-const smallCardBaseRow = "grid grid-cols-3 gap-4 p-4"
+const smallCardBaseRow = "grid grid-cols-3 xl:grid-cols-4 gap-4 p-4"
 const FitnessPublic = () => {
 
   const { refined, dailyHighlightCards } = useFitnessData();

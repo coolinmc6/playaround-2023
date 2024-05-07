@@ -4,6 +4,9 @@ Live app: https://playaround-2023.vercel.app/
 
 GitHub: https://github.com/coolinmc6/playaround-2023
 
+Inspiration:
+- https://next-admin-dash.vercel.app/
+
 Run the dev server:
 
 ```bash
@@ -24,5 +27,4 @@ npm run storybook
 
 ### Next Steps
 
-- Style the blog, get the blog home working, create a bunch more examples
-- 
+- add icons to links
