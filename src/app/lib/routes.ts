@@ -54,7 +54,7 @@ export const routes: Routes = {
   CONTEXT: { path: '/concepts/context', name: 'Context Home', category: CONCEPTS, bold: false },
   CUSTOM_HOOKS: { path: '/concepts/custom-hooks', name: 'Custom Hooks', category: CONCEPTS },
   PERFORMANCE: { path: '/concepts/performance', name: 'Performance', category: CONCEPTS },
-  RENDERING: { path: '/concepts/rendering', name: 'Rendering', category: CONCEPTS },
+  // RENDERING: { path: '/concepts/rendering', name: 'Rendering', category: CONCEPTS },
   USE_REDUCER: { path: '/concepts/use-reducer', name: 'Use Reducer', category: CONCEPTS, divider: true },
 
   RANDOM_HOME: { path: '/random', name: 'Random Home', category: PERSONAL, bold: true },

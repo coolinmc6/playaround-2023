@@ -13,6 +13,7 @@ const config: Config = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@store/(.*)$': '<rootDir>/src/store/$1',
+    '^@server/(.*)$': '<rootDir>/server/$1',
   },
   // Add more setup options before each test is run
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],

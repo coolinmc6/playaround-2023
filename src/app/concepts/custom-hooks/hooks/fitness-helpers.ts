@@ -38,6 +38,7 @@ type FitnessItemListedMap = {
 }
 
 export const getDailyItems = (entry: Entry): FlatEntry => {
+  if (!entry) return { date: '', items: [] }
   const { date, data } = entry
 
   const items = [
@@ -96,6 +97,10 @@ export const getTotalsByType = (items: FitnessItemsArray): FitnessStatsMap => {
       completed: 0,
       percentage: 0
     },
+  }
+
+  if (!items.length) {
+    return map;
   }
 
   items.forEach((item: FitnessItemType) => {

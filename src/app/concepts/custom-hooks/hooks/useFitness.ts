@@ -28,6 +28,5 @@ export const useFitnessData = () => {
       dailyTotalByName: getTotalsByName(getDailyItems(dateInfo.lastDay[0]).items),
     },
     dateStats,
-
   }
 }

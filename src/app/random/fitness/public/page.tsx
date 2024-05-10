@@ -40,6 +40,11 @@ Items to Build:
 - Totals by Type
 */
 
+const getDailies = (dailyHighlightCards: any) => {
+  const { fitness, nutrition, other } = dailyHighlightCards.dailyTotalByType
+  return [fitness, nutrition, other]
+}
+
 const smallCardBaseRow = "grid grid-cols-3 xl:grid-cols-4 gap-4 p-4"
 const FitnessPublic = () => {
 
@@ -47,7 +52,7 @@ const FitnessPublic = () => {
   console.log(dailyHighlightCards)
   const { fitness, nutrition, other } = refined.totalsByType
   const totals = [fitness, nutrition, other]
-  const dailies = [dailyHighlightCards.dailyTotalByType.fitness, dailyHighlightCards.dailyTotalByType.nutrition, dailyHighlightCards.dailyTotalByType.other]
+  const dailies = getDailies(dailyHighlightCards)
   return (
     <div>
       <div className={smallCardBaseRow}>
@@ -58,6 +63,7 @@ const FitnessPublic = () => {
                 object={total}
                 title={total.type}
                 value={total.percentage}
+                key={total.type}
               />
             )
           })}

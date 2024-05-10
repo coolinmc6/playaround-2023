@@ -21,3 +21,21 @@ export const getProgressColor = (percentCompleted: number) => {
     return 'green';
   }
 }
+
+export const generateDateRangeWithEntries = (start: string, end: string, entries: any[]) => {
+  const startTime = new Date(start).getTime();
+  const endTime = new Date(end).getTime();
+  const oneDay = 24 * 60 * 60 * 1000;
+  const dateEntriesMap = new Map(entries.map(entry => [entry.date, entry]));
+
+  const result = [];
+  for (let currentTime = startTime; currentTime <= endTime; currentTime += oneDay) {
+    const currentDateString = new Date(currentTime).toISOString().split('T')[0];
+    result.push({
+      date: currentDateString,
+      entry: dateEntriesMap.get(currentDateString) || null
+    });
+  }
+
+  return result;
+}
