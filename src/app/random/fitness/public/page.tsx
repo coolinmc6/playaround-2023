@@ -49,7 +49,7 @@ const smallCardBaseRow = "grid grid-cols-3 xl:grid-cols-4 gap-4 p-4"
 const FitnessPublic = () => {
 
   const { refined, dailyHighlightCards } = useFitnessData();
-  console.log(dailyHighlightCards)
+  console.log(refined.totalsByDate)
   const { fitness, nutrition, other } = refined.totalsByType
   const totals = [fitness, nutrition, other]
   const dailies = getDailies(dailyHighlightCards)

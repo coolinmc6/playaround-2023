@@ -38,9 +38,10 @@ const baseEntry: FitnessEntry = {
 
 
 type FitnessCardProps = {
-  title: string;
-  items: Item[];
   clickHandler: (item: Item) => void;
+  disabled: boolean;
+  items: Item[];
+  title: string;
 }
 
 function updateItem(baseState: FitnessEntry, update: Item): FitnessEntry {
@@ -70,7 +71,7 @@ function updateItem(baseState: FitnessEntry, update: Item): FitnessEntry {
   return newState;
 }
 
-const FitnessCard = ({ title, items, clickHandler }: FitnessCardProps) => {
+const FitnessCard = ({ title, items, clickHandler, disabled = false }: FitnessCardProps) => {
   const handleSwitchClick = (item: Item) => () => {
     clickHandler(item);
   }
@@ -112,6 +113,7 @@ const FitnessCard = ({ title, items, clickHandler }: FitnessCardProps) => {
 
 const Fitness = () => {
   const [data, setData] = useState<FitnessEntry>(baseEntry)
+  const [loading, setLoading] = useState(false);
   
 
   useEffect(() => {
@@ -128,6 +130,7 @@ const Fitness = () => {
     item.checked = !item.checked;
     const newData = updateItem(data, item);
     setData(newData);
+    setLoading(true);
 
     saveFitnessData(newData).then((res) => {
       
@@ -147,14 +150,17 @@ const Fitness = () => {
         message: 'Error saving data. Check if server is running.'
       })
     })
+    .finally(() => {
+      setLoading(false);
+    })
   }
 
   return (
     <div className="min-h-screen p-12">
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-        <FitnessCard title="Nutrition" items={data.data.nutrition} clickHandler={handleSwitchClick} />
-        <FitnessCard title="Fitness" items={data.data.fitness} clickHandler={handleSwitchClick} />
-        <FitnessCard title="Other" items={data.data.other} clickHandler={handleSwitchClick} />
+        <FitnessCard disabled={loading} title="Nutrition" items={data.data.nutrition} clickHandler={handleSwitchClick} />
+        <FitnessCard disabled={loading} title="Fitness" items={data.data.fitness} clickHandler={handleSwitchClick} />
+        <FitnessCard disabled={loading} title="Other" items={data.data.other} clickHandler={handleSwitchClick} />
       </div>
     </div>
   )
