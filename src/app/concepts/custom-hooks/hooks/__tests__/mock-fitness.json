@@ -1013,7 +1013,7 @@
           },
           {
             "name": "No alcohol",
-            "checked": true,
+            "checked": false,
             "type": "other"
           },
           {
@@ -1089,7 +1089,7 @@
           },
           {
             "name": "No alcohol",
-            "checked": true,
+            "checked": false,
             "type": "other"
           },
           {
@@ -1148,7 +1148,7 @@
           },
           {
             "name": "Log snacks into MyFitnessPal",
-            "checked": true,
+            "checked": false,
             "type": "nutrition"
           }
         ],
@@ -1170,7 +1170,7 @@
           },
           {
             "name": "Creatine",
-            "checked": true,
+            "checked": false,
             "type": "other"
           }
         ]

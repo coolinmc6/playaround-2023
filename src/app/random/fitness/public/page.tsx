@@ -2,9 +2,10 @@
 
 import React from 'react';
 import { useFitnessData } from '@/app/concepts/custom-hooks/hooks/useFitness';
-import { Card, List, ListItem, ProgressCircle, Tracker, type Color } from '@tremor/react';
+import { Card, List, ListItem, ProgressCircle, Tracker, type Color, ProgressBar } from '@tremor/react';
 import Badge from '@/core/Badge';
 import { getProgressColor } from '@/app/random/fitness/helpers';
+import { getBadgeType } from '@/app/random/fitness/helpers';
 
 // https://www.tremor.so/docs/getting-started/installation - finish tremor install
 
@@ -41,18 +42,51 @@ Items to Build:
 */
 
 const getDailies = (dailyHighlightCards: any) => {
+  // console.log({ dailyHighlightCards})
   const { fitness, nutrition, other } = dailyHighlightCards.dailyTotalByType
   return [fitness, nutrition, other]
 }
 
+
+
+const ProgressRow = ({ item }: { item: any}) => {
+  return (
+    <div className="p-2 mt-2">
+      <div className="pb-2">{item.type}</div>
+      <div className="flex justify-between">
+        <div className="px-4">
+          <Badge type={getBadgeType(item.percentage)}>
+            {item.percentage}%
+          </Badge>
+        </div>
+        <ProgressBar value={item.percentage} color={getProgressColor(item.percentage)} />
+      </div>
+    </div>
+  )
+}
+
+
 const smallCardBaseRow = "grid grid-cols-3 xl:grid-cols-4 gap-4 p-4"
+const mediumCardBaseRow = "grid grid-cols-2 xl:grid-cols-3 gap-4 p-4"
 const FitnessPublic = () => {
 
   const { refined, dailyHighlightCards } = useFitnessData();
-  console.log(refined.totalsByDate)
+  console.log({ refined })
   const { fitness, nutrition, other } = refined.totalsByType
   const totals = [fitness, nutrition, other]
   const dailies = getDailies(dailyHighlightCards)
+  const totalsByNameSevenDays = Object.keys(refined.totals.lastSevenDays.totalsByName).map((key) => {
+    return {
+      ...refined.totals.lastSevenDays.totalsByName[key],
+      type: key
+    }
+  }).sort((a, b) => b.percentage - a.percentage)
+  const totalsByNameThirtyDays = Object.keys(refined.totals.lastThirtyDays.totalsByName).map((key) => {
+    return {
+      ...refined.totals.lastThirtyDays.totalsByName[key],
+      type: key
+    }
+  }).sort((a, b) => b.percentage - a.percentage)
   return (
     <div>
       <div className={smallCardBaseRow}>
@@ -79,6 +113,24 @@ const FitnessPublic = () => {
             />
           )
         })}
+      </div>
+      <div className={mediumCardBaseRow}>
+        <Card >
+          <Badge type="info">Last Seven Days</Badge>
+          {totalsByNameSevenDays.map((object, index) => {
+            return (
+                <ProgressRow key={index} item={object} />
+              )
+            })}
+        </Card>
+        <Card >
+          <Badge type="info">Last Thirty Days</Badge>
+          {totalsByNameThirtyDays.map((object, index) => {
+            return (
+                <ProgressRow key={index} item={object} />
+              )
+            })}
+        </Card>
       </div>
       <div className={smallCardBaseRow}>
         <Card className="break-words">

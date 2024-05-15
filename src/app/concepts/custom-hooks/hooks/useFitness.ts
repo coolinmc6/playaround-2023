@@ -1,17 +1,34 @@
 import React from 'react';
 import fitnessData from '@server/data/fitness.json';
 
-import { getDailyItems, getDateStats, getDateQueries, getTotalsByType, getTotalsByName } from './fitness-helpers';
+import {
+  getDailyItems,
+  getDateQueries,
+  getTotalsByType,
+  getTotalsByName,
+  getTotalsByDate,
+  createAllTotalsObject,
+} from '@/app/concepts/custom-hooks/hooks/fitness-helpers';
+
+import {
+  type Entry,
+  type FlatEntry,
+} from '@/app/concepts/custom-hooks/hooks/fitness-helper-types';
+
+import DateListObject from '@/app/concepts/custom-hooks/hooks/DateListObject'
 
 export const useFitnessData = () => {
   const raw = fitnessData
   const { entries } = raw
-  const dailyItems = entries.map(getDailyItems)
-  const allItems = dailyItems.map((entry: any) => entry.items).flat()
-  const dateStats = getDateStats(entries)
+  const dailyItems: FlatEntry[] = entries.map(getDailyItems)
+  const allItems = dailyItems.map((entry: FlatEntry) => entry.items).flat()
   const dateInfo = getDateQueries(entries)
 
+  const cleaned = getTotalsByDate(dateInfo)
+  const dateListObject = new DateListObject(entries)
+  console.log(dateListObject)
   return {
+    
     raw: {
       all: raw,
       entries,
@@ -21,12 +38,18 @@ export const useFitnessData = () => {
       allItems,
       totalsByType: getTotalsByType(allItems),
       totalsByName: getTotalsByName(allItems),
-      totalsByDate: getDateQueries(entries),
+      totalsByDate: dateInfo,
+      totalsByDateCleaned: cleaned,
+      totals: {
+        // lastDay: createAllTotalsObject(cleaned.lastDay.map(entry => entry.items).flat()),
+        lastDay: createAllTotalsObject(cleaned.lastDay),
+        lastSevenDays: createAllTotalsObject(cleaned.lastSevenDays),
+        lastThirtyDays: createAllTotalsObject(cleaned.lastThirtyDays),
+      }
     },
     dailyHighlightCards: {
       dailyTotalByType: getTotalsByType(getDailyItems(dateInfo.lastDay[0]).items),
       dailyTotalByName: getTotalsByName(getDailyItems(dateInfo.lastDay[0]).items),
     },
-    dateStats,
   }
 }

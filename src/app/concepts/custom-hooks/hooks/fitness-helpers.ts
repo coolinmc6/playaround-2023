@@ -1,42 +1,14 @@
-type Entry = {
-  date: string;
-  data: any; 
-}
+import {
+  type Entry,
+  type FlatEntry,
+  type FitnessItemType,
+  type FitnessItemListedMap,
+  type FitnessStatsMap,
+  type FitnessStats,
+  type FitnessItemsArray,
+} from '@/app/concepts/custom-hooks/hooks/fitness-helper-types';
 
-type FlatEntry = {
-  date: string;
-  items: FitnessItemType[];
-}
-
-export type FitnessItemType = {
-  name: string;
-  checked: boolean;
-  type: 'fitness' | 'nutrition' | 'other';
-}
-
-type FitnessItemsArray = FitnessItemType[]
-
-type FitnessStats = {
-  type: string;
-  total: number;
-  completed: number;
-  percentage: number;
-}
-
-type FitnessStatsMap = {
-  fitness: FitnessStats;
-  nutrition: FitnessStats;
-  other: FitnessStats;
-}
-
-type FitnessItemListedMap = {
-  [key: string]: {
-    total: number;
-    completed: number;
-  }
-
-}
-
+// Entry Object
 export const getDailyItems = (entry: Entry): FlatEntry => {
   if (!entry) return { date: '', items: [] }
   const { date, data } = entry
@@ -52,18 +24,37 @@ export const getDailyItems = (entry: Entry): FlatEntry => {
   }
 }
 
+// const filterEntriesByDate = (entries: Entry[], days: number): Entry[] => {
+//   const now = new Date();
+//   const daysInMilliseconds = days * 24 * 60 * 60 * 1000; 
+
+//   return entries.filter(entry => {
+//     const entryDate = new Date(entry.date);
+//     const timeDifference = Math.abs(now.getTime() - entryDate.getTime()); 
+//     return timeDifference <= daysInMilliseconds; 
+//   });
+// }
+
+// Date List Object (has array of Entry Objects)
 const filterEntriesByDate = (entries: Entry[], days: number): Entry[] => {
   const now = new Date();
-  const daysInMilliseconds = days * 24 * 60 * 60 * 1000; 
+  const daysInMilliseconds = days * 24 * 60 * 60 * 1000;
+  const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
 
   return entries.filter(entry => {
     const entryDate = new Date(entry.date);
-    const timeDifference = Math.abs(now.getTime() - entryDate.getTime()); 
-    return timeDifference <= daysInMilliseconds; 
+    const entryDayStart = new Date(entryDate.getFullYear(), entryDate.getMonth(), entryDate.getDate()).getTime();
+    const timeDifference = Math.abs(todayStart - entryDayStart);
+    return timeDifference < daysInMilliseconds;
   });
+};
+
+export type DateQueries = {
+  [key:string]: Entry[]
 }
 
-export const getDateQueries = (entries: Entry[]) => {
+// Date List Object
+export const getDateQueries = (entries: Entry[]): DateQueries => {
   return {
     lastDay: filterEntriesByDate(entries, 1),
     lastSevenDays: filterEntriesByDate(entries, 7),
@@ -71,12 +62,40 @@ export const getDateQueries = (entries: Entry[]) => {
   }
 }
 
-export const getDateStats = (entries: Entry[]) => {
+export type DateQueryItems = {
+  [key:string]: FlatEntry[]
+}
+
+export const getTotalsByDate = (dateQueries: DateQueries): DateQueryItems => {
+  const object: DateQueryItems = {};
+  
+  Object.entries(dateQueries).forEach(([key, array]) => {
+    object[key] = array.map(getDailyItems) as FlatEntry[];
+  });
+
+  console.log(object);
+  return object;
+};
+
+type TotalsObject = {
+  totalsByType: FitnessStatsMap;
+  totalsByName: FitnessItemListedMap;
+}
+
+// const flattenItems = (items: FlatEntry[]) => {
+//   return items.map(entry => entry.items).flat()
+// }
+
+// Date List Object
+export const createAllTotalsObject = (items: FlatEntry[]): TotalsObject => {
   return {
-    totalNumberOfdays: entries.length,
+    totalsByType: getTotalsByType(items.map(entry => entry.items).flat()),
+    totalsByName: getTotalsByName(items.map(entry => entry.items).flat())
   }
 }
 
+/*************************************************************************/
+// Fitness Stats Object
 export const getTotalsByType = (items: FitnessItemsArray): FitnessStatsMap => {
   const map = {
     fitness: {
@@ -114,7 +133,8 @@ export const getTotalsByType = (items: FitnessItemsArray): FitnessStatsMap => {
   return map;
 }
 
-export const getTotalsByName = (items: FitnessItemType[]): FitnessItemListedMap => {
+// Date List Object
+export const getTotalsByName = (items: FitnessItemsArray): FitnessItemListedMap => {
   const map: any = {}
 
   items.forEach((item: FitnessItemType) => {
@@ -130,6 +150,10 @@ export const getTotalsByName = (items: FitnessItemType[]): FitnessItemListedMap 
     if (item.checked) {
       map[name].completed++
     }
+  })
+
+  Object.keys(map).forEach((key) => {
+    map[key].percentage = Math.round((map[key].completed / map[key].total) * 100)
   })
 
   return map;
