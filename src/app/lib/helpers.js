@@ -7,3 +7,5 @@ export const generateRandomId = (length = 8) => {
   }
   return result;
 }
+
+export const IS_DEV = process.env.NODE_ENV === 'development';

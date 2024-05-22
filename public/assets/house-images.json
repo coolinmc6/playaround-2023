@@ -1,0 +1,23 @@
+{
+  "outdoorKitchen": {
+    "path": "./public/assets/house/outdoor-kitchen",
+    "images": [
+      "/assets/house/outdoor-kitchen/covered-outdoor-kitchen01.jpeg",
+      "/assets/house/outdoor-kitchen/covered-outdoor-kitchen02.jpeg",
+      "/assets/house/outdoor-kitchen/covered-outdoor-kitchen03.jpeg",
+      "/assets/house/outdoor-kitchen/covered-outdoor-kitchen04.webp"
+    ]
+  },
+  "other": {
+    "path": "./public/assets/house/other",
+    "images": [
+      "/assets/house/other/laundry-room01.webp"
+    ]
+  },
+  "bedroom": {
+    "path": "./public/assets/house/bedroom",
+    "images": [
+      "/assets/house/bedroom/full-size-bunk-beds-01.webp"
+    ]
+  }
+}
