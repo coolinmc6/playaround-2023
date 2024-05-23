@@ -2,6 +2,7 @@ import fs, { write } from 'fs';
 import path from 'path';
 
 import { PRODUCTIVITY_BASE_PATH, PRODUCTIVITY_OUTPUT_PATH } from './constants.mjs';
+import { dir } from 'console';
 
 const HOUSE_BASE_PATH = './public/assets/house';
 const HOUSE_OUTPUT_PATH = './public/assets/house-images.json';
@@ -24,10 +25,12 @@ const houseImageDirectory = {
 const getImages = (dirPath) => {
   const images = [];
 
+  const cleanedPath = dirPath.replace('./public', '');
+
   fs.readdirSync(dirPath).forEach(file => {
     const ext = path.extname(file).toLowerCase();
     if (['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp'].includes(ext)) {
-      const publicPath = path.join('/assets/house', path.basename(dirPath), file);
+      const publicPath = path.join(cleanedPath, file);
       images.push(publicPath);
     }
   });

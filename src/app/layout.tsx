@@ -22,7 +22,7 @@ export default function RootLayout ({
     <html lang="en">
       <body className="relative">
         <Sidebar />
-        <main className="ml-64 h-full">
+        <main className="lg:ml-64 h-full">
           <div className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40 justify-between lg:justify-end" />
           {children}
         </main>
