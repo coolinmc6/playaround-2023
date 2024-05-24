@@ -20,6 +20,7 @@ import DateListObject from '@/app/concepts/custom-hooks/hooks/DateListObject'
 export const useFitnessData = () => {
   const raw = fitnessData
   const { entries } = raw
+  const reversed = entries.concat().reverse()
   const dailyItems: FlatEntry[] = entries.map(getDailyItems)
   const allItems = dailyItems.map((entry: FlatEntry) => entry.items).flat()
   const dateInfo = getDateQueries(entries)
@@ -31,7 +32,8 @@ export const useFitnessData = () => {
     
     raw: {
       all: raw,
-      entries,
+      entries: entries as Entry[],
+      reversed: reversed as Entry[],
     },
     refined: {
       dailyItems,

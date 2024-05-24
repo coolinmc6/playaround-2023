@@ -23,7 +23,7 @@ const getAllData = async () => {
   return object;
 }
 
-const updateData = async (todaysEntry) => {
+const updateTodaysData = async (todaysEntry) => {
   const { data } = await getAllData();
   if (data.entries.some(entry => checkIfDateIsToday(entry.date))) {
     const updatedData = {
@@ -46,7 +46,20 @@ const updateData = async (todaysEntry) => {
     }
     await writeJsonFile(FITNESS_PATH, updatedData);
   }
-  
+}
+
+const updateEntryByDate = async (updatedEntry) => {
+  const { data } = await getAllData();
+  const updateData = {
+    ...data,
+    entries: data.entries.map(entry => {
+      if (entry.date === updatedEntry.date) {
+        return updatedEntry;
+      }
+      return entry;
+    })
+  }
+  await writeJsonFile(FITNESS_PATH, updateData);
 }
 
 // Define a route for '/fitness/load-data'
@@ -60,19 +73,26 @@ router.get('/load-data', async (req, res) => {
   }
 });
 
-// Define a route for '/fitness/save-data'
 router.post('/save-data', async (req, res) => {
   const todaysEntry = req.body;
   console.log('Saving data to fitness app')
   try {
-    await updateData(todaysEntry);
+    await updateTodaysData(todaysEntry);
     res.send('Data saved to fitness app');
   } catch(error) {
     res.status(500).send('Error saving data to file');
   }
-  
 });
 
-// You can add more routes here
+router.post('/update-entry', async (req, res) => {
+  const updatedEntry = req.body;
+  console.log('Updating entry in fitness app')
+  try {
+    await updateEntryByDate(updatedEntry);
+    res.send('Entry updated in fitness app');
+  } catch(error) {
+    res.status(500).send('Error updating entry in file');
+  }
+})
 
 export default router;

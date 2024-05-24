@@ -1562,7 +1562,7 @@
         "fitness": [
           {
             "name": "Daily Elliptical",
-            "checked": false,
+            "checked": true,
             "type": "fitness"
           },
           {
@@ -1594,7 +1594,7 @@
           },
           {
             "name": "Log lunch into MyFitnessPal",
-            "checked": false,
+            "checked": true,
             "type": "nutrition"
           },
           {

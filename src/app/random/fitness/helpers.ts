@@ -1,3 +1,5 @@
+import { type FitnessEntry, type Item } from "@/app/random/fitness/types";
+
 export const getBadgeType = (percentCompleted: number) => {
   if (percentCompleted < 25) {
     return 'danger';
@@ -38,4 +40,27 @@ export const generateDateRangeWithEntries = (start: string, end: string, entries
   }
 
   return result;
+}
+
+
+export const updateItem  = (baseState: FitnessEntry, update: Item): FitnessEntry => {
+  const newState = {
+    date: baseState.date,
+    data: {
+      fitness: [...baseState.data.fitness],
+      nutrition: [...baseState.data.nutrition],
+      other: [...baseState.data.other]
+    }
+  };
+
+  const category = update.type;
+
+  const index = newState.data[category].findIndex(item => item.name === update.name);
+  if (index !== -1) {
+    newState.data[category][index] = { ...newState.data[category][index], ...update };
+  } else {
+    newState.data[category].push(update);
+  }
+
+  return newState;
 }
