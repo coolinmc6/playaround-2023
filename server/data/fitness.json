@@ -405,7 +405,7 @@
           },
           {
             "name": "No alcohol",
-            "checked": false,
+            "checked": true,
             "type": "other"
           },
           {
@@ -481,7 +481,7 @@
           },
           {
             "name": "No alcohol",
-            "checked": false,
+            "checked": true,
             "type": "other"
           },
           {
@@ -1334,17 +1334,17 @@
         "fitness": [
           {
             "name": "Daily Elliptical",
-            "checked": false,
+            "checked": true,
             "type": "fitness"
           },
           {
             "name": "Daily Abs",
-            "checked": false,
+            "checked": true,
             "type": "fitness"
           },
           {
             "name": "Daily Kettlebells",
-            "checked": false,
+            "checked": true,
             "type": "fitness"
           },
           {
@@ -1393,7 +1393,7 @@
           },
           {
             "name": "No alcohol",
-            "checked": false,
+            "checked": true,
             "type": "other"
           },
           {
@@ -1425,7 +1425,7 @@
           },
           {
             "name": "Lift",
-            "checked": false,
+            "checked": true,
             "type": "fitness"
           }
         ],
@@ -1469,7 +1469,7 @@
           },
           {
             "name": "No alcohol",
-            "checked": false,
+            "checked": true,
             "type": "other"
           },
           {
@@ -1486,17 +1486,17 @@
         "fitness": [
           {
             "name": "Daily Elliptical",
-            "checked": false,
+            "checked": true,
             "type": "fitness"
           },
           {
             "name": "Daily Abs",
-            "checked": false,
+            "checked": true,
             "type": "fitness"
           },
           {
             "name": "Daily Kettlebells",
-            "checked": false,
+            "checked": true,
             "type": "fitness"
           },
           {
@@ -1545,7 +1545,7 @@
           },
           {
             "name": "No alcohol",
-            "checked": false,
+            "checked": true,
             "type": "other"
           },
           {
@@ -1616,7 +1616,7 @@
           },
           {
             "name": "No food after 9pm",
-            "checked": false,
+            "checked": true,
             "type": "other"
           },
           {

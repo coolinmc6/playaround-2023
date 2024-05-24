@@ -9,3 +9,7 @@ export const loadFitnessData = async () => {
 export const saveFitnessData = async (data: any) => {
   return request.post(FITNESS.SAVE_DATA, data)
 }
+
+export const updateFitnessData = async (data: any) => {
+  return request.post(FITNESS.UPDATE_ENTRY, data)
+}

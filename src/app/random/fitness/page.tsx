@@ -59,6 +59,9 @@ const Fitness = () => {
     })
   }
 
+  const version1 = "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2"
+  const version2 = "grid grid-cols-1"
+
   return (
     <div className="min-h-screen p-12">
       <h1 className="text-2xl font-bold text-center mb-8">Fitness Logging: Today</h1>
@@ -67,10 +70,11 @@ const Fitness = () => {
         <FitnessCard disabled={loading} title="Fitness" items={data.data.fitness} clickHandler={handleSwitchClick} />
         <FitnessCard disabled={loading} title="Other" items={data.data.other} clickHandler={handleSwitchClick} />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2">
+      <h1 className="text-2xl font-bold text-center my-8">History</h1>
+      <div className={version2}>
         {reversed.map((entry) => {
           return (
-            <FitnessAllItems fitnessEntry={entry} className="max-w-sm" />
+            <FitnessAllItems fitnessEntry={entry} className="p-4 mb-6" />
           )
         })}
       </div>
