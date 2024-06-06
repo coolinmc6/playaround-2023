@@ -21,7 +21,7 @@ export const useDialogStore = create<DialogStoreState & DialogActions>((set, get
   ...initialState,
 
   openDialog: (dialog: string) => {
-    set((state) => ({
+    set((state: any) => ({
       [dialog]: {
         ...state[dialog],
         isOpen: true,
@@ -29,7 +29,7 @@ export const useDialogStore = create<DialogStoreState & DialogActions>((set, get
     }))
   },
   closeDialog: (dialog: string) => {
-    set((state) => ({
+    set((state: any) => ({
       [dialog]: {
         ...state[dialog],
         isOpen: false,
