@@ -59,11 +59,12 @@ const Fitness = () => {
     })
   }
 
+  // TODO: Remove other versions
   const version1 = "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2"
   const version2 = "grid grid-cols-1"
 
   return (
-    <div className="min-h-screen p-12">
+    <div className="min-h-screen p-12 m-auto max-w-7xl">
       <h1 className="text-2xl font-bold text-center mb-8">Fitness Logging: Today</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4">
         <FitnessCard disabled={loading} title="Nutrition" items={data.data.nutrition} clickHandler={handleSwitchClick} />

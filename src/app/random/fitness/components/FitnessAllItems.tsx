@@ -22,16 +22,18 @@ const FitnessSection = ({ name, items, onSwitchClick }: FitnessSectionProps) => 
   return (
     <div className="px-2">
       <h4 className="text-xl font-bold text-blue-700 mt-4">{name}</h4>
-      {items.map((item) => (
-        <div key={item.name} className="flex items-center justify-between py-1">
-          <div className="flex-grow">
-            {item.name}
+      <>
+        {items.map((item) => (
+          <div key={item.name} className="flex items-center justify-between py-1">
+            <div className="flex-grow">
+              {item.name}
+            </div>
+            <div className="w-15">
+              <Switch checked={item.checked} onClick={() => onSwitchClick(item)} />
+            </div>
           </div>
-          <div className="w-15">
-            <Switch checked={item.checked} onClick={() => onSwitchClick(item)} />
-          </div>
-        </div>
-      ))}
+        ))}
+      </>
     </div>
   );
 }

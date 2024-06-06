@@ -64,7 +64,8 @@ export const routes: Routes = {
   FITNESS_PUBLIC,
   GEOLOCATION: { path: '/random/geo-location', name: 'GeoLocation', category: PERSONAL },
   MERMAID,
-  LETTERS: { path: '/random/letters', name: 'Tracing Letters', category: PERSONAL },
+  PICTURES: { path: '/random/pictures', name: 'Pictures', category: PERSONAL },
+  TRACING_LETTERS: { path: '/random/letters', name: 'Tracing Letters', category: PERSONAL },
   WORDLE: { path: '/random/wordle', name: 'Wordle', category: PERSONAL, divider: true },
   DEV_TOOLS,
 } as const

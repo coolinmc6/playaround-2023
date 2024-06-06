@@ -29,6 +29,11 @@ export const baseElements = {
       "name": "Lift",
       "checked": false,
       "type": "fitness"
+    },
+    {
+      "name": "50 Squats",
+      "checked": false,
+      "type": "fitness"
     }
   ],
   nutrition: [
@@ -79,7 +84,6 @@ export const baseElements = {
 }
 
 export const createBaseObject = () => {
-
   return {
     date: new Date().toISOString(),
     data: baseElements

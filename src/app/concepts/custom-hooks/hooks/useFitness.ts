@@ -8,6 +8,7 @@ import {
   getTotalsByName,
   getTotalsByDate,
   createAllTotalsObject,
+  getLast30DaysData,
 } from '@/app/concepts/custom-hooks/hooks/fitness-helpers';
 
 import {
@@ -47,6 +48,9 @@ export const useFitnessData = () => {
         lastDay: createAllTotalsObject(cleaned.lastDay),
         lastSevenDays: createAllTotalsObject(cleaned.lastSevenDays),
         lastThirtyDays: createAllTotalsObject(cleaned.lastThirtyDays),
+      },
+      hardDates: {
+        last30Days: getLast30DaysData(entries),
       }
     },
     dailyHighlightCards: {

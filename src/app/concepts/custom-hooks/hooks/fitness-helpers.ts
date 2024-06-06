@@ -7,6 +7,7 @@ import {
   type FitnessStats,
   type FitnessItemsArray,
 } from '@/app/concepts/custom-hooks/hooks/fitness-helper-types';
+import dayjs from 'dayjs';
 
 // Entry Object
 export const getDailyItems = (entry: Entry): FlatEntry => {
@@ -22,6 +23,25 @@ export const getDailyItems = (entry: Entry): FlatEntry => {
     date,
     items
   }
+}
+
+export const getLast30DaysData = (entries: Entry[], numberOfDays = 30) => {
+  const result: Record<string, Entry | null> = {};
+  const today = dayjs();
+
+  for (let i = 0; i < numberOfDays; i++) {
+      const date = today.subtract(i, 'day').format('YYYY-MM-DD');
+      result[date] = null;
+  }
+
+  entries.forEach(log => {
+    const logDate = dayjs(log.date).format('YYYY-MM-DD');
+    if (result.hasOwnProperty(logDate)) {
+        result[logDate] = log;
+    }
+  });
+
+  return result;
 }
 
 // const filterEntriesByDate = (entries: Entry[], days: number): Entry[] => {
