@@ -54,14 +54,12 @@ const Fitness = () => {
         message: 'Error saving data. Check if server is running.'
       })
     })
-    .finally(() => {
-      setLoading(false);
-    })
+      .finally(() => {
+        setLoading(false);
+      })
   }
 
-  // TODO: Remove other versions
-  const version1 = "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2"
-  const version2 = "grid grid-cols-1"
+  const version1 = "grid grid-cols-1"
 
   return (
     <div className="min-h-screen p-12 m-auto max-w-7xl">
@@ -72,10 +70,10 @@ const Fitness = () => {
         <FitnessCard disabled={loading} title="Other" items={data.data.other} clickHandler={handleSwitchClick} />
       </div>
       <h1 className="text-2xl font-bold text-center my-8">History</h1>
-      <div className={version2}>
-        {reversed.map((entry) => {
+      <div className={version1}>
+        {reversed.map((entry, index) => {
           return (
-            <FitnessAllItems fitnessEntry={entry} className="p-4 mb-6" />
+            <FitnessAllItems fitnessEntry={entry} className="p-4 mb-6" key={index} />
           )
         })}
       </div>

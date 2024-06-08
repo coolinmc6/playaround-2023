@@ -30,19 +30,21 @@ export const getLast30DaysData = (entries: Entry[], numberOfDays = 30) => {
   const today = dayjs();
 
   for (let i = 0; i < numberOfDays; i++) {
-      const date = today.subtract(i, 'day').format('YYYY-MM-DD');
-      result[date] = null;
+    const date = today.subtract(i, 'day').format('YYYY-MM-DD');
+    result[date] = null;
   }
 
   entries.forEach(log => {
     const logDate = dayjs(log.date).format('YYYY-MM-DD');
     if (result.hasOwnProperty(logDate)) {
-        result[logDate] = log;
+      result[logDate] = log;
     }
   });
 
   return result;
 }
+
+
 
 // const filterEntriesByDate = (entries: Entry[], days: number): Entry[] => {
 //   const now = new Date();

@@ -2,13 +2,13 @@
 
 import React from 'react';
 import { openDialog } from '@/app/store/dialog';
-import Button from '@/core/Button';
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const NavigationButton = () => {
   const handleNavOpen = () => openDialog('navigation-dialog')
   return (
     <>
-      <Button variant="primary" onClick={handleNavOpen}>Navigation</Button>
+      <GiHamburgerMenu onClick={() => handleNavOpen()} className="cursor-pointer" />
     </>
   )
 }

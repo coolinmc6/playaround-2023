@@ -14,7 +14,7 @@ export type DialogActions = {
 }
 
 export const initialState: DialogStoreState = {
-  'navigation-dialog': { isOpen: true },
+  'navigation-dialog': { isOpen: false },
 }
 
 export const useDialogStore = create<DialogStoreState & DialogActions>((set, get) => ({

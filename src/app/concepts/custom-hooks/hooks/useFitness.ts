@@ -49,6 +49,15 @@ export const useFitnessData = () => {
         lastSevenDays: createAllTotalsObject(cleaned.lastSevenDays),
         lastThirtyDays: createAllTotalsObject(cleaned.lastThirtyDays),
       },
+      trackerTotals: {
+        dateCompletions: Object.keys(getLast30DaysData(reversed)).map((date) => {
+          const object = getLast30DaysData(reversed)[date]
+          return {
+            tooltip: date,
+            color: object !== null ? 'green' : 'red',
+          }
+        }),
+      },
       hardDates: {
         last30Days: getLast30DaysData(entries),
       }

@@ -43,7 +43,7 @@ export const generateDateRangeWithEntries = (start: string, end: string, entries
 }
 
 
-export const updateItem  = (baseState: FitnessEntry, update: Item): FitnessEntry => {
+export const updateItem = (baseState: FitnessEntry, update: Item): FitnessEntry => {
   const newState = {
     date: baseState.date,
     data: {
