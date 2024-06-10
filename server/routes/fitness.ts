@@ -1,6 +1,6 @@
 import express from 'express';
 import { readFile, writeFile } from 'fs/promises';
-import { createBaseObject, checkIfDateIsToday } from './fitness-helpers.mjs';
+import { createBaseObject, checkIfDateIsToday } from '@server/routes/fitness/fitness-helpers';
 import { writeJsonFile } from '../json-writer.mjs';
 
 const router = express.Router();

@@ -9,8 +9,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "noEmit": true,
     "paths": {
       "@/*": ["./src/*"],
@@ -28,8 +28,8 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es2017",
+    "target": "ES6",
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "script/get-images.mjs"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
 }

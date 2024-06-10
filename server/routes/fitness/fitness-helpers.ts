@@ -1,4 +1,6 @@
-export const checkIfDateIsToday = (dateString) => {
+import { type ElementTypes, type FitnessEntry } from "@/app/random/fitness/types"
+
+export const checkIfDateIsToday = (dateString: string): boolean => {
   const dateObject = new Date(dateString);
   dateObject.setHours(0, 0, 0, 0); // Reset time part to midnight
 
@@ -8,7 +10,7 @@ export const checkIfDateIsToday = (dateString) => {
   return dateObject.getTime() === today.getTime();
 }
 
-export const baseElements = {
+export const baseElements: ElementTypes = {
   fitness: [
     {
       "name": "Daily Elliptical",
@@ -83,7 +85,7 @@ export const baseElements = {
   ]
 }
 
-export const createBaseObject = () => {
+export const createBaseObject = (): FitnessEntry => {
   return {
     date: new Date().toISOString(),
     data: baseElements

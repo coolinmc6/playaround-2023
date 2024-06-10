@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { csvWriter, getAllData } from './csv-writer.mjs';
-import fitnessRouter from './routes/fitness.mjs'
+import fitnessRouter from './routes/fitness.ts'
 
 const app = express();
 app.use(express.json());
