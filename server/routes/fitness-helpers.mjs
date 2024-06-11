@@ -34,6 +34,11 @@ export const baseElements = {
       "name": "50 Squats",
       "checked": false,
       "type": "fitness"
+    },
+    {
+      "name": "Long plank",
+      "checked": false,
+      "type": "fitness"
     }
   ],
   nutrition: [

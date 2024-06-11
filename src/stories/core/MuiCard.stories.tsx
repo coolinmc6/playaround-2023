@@ -12,7 +12,7 @@ type Story = StoryObj<typeof meta>;
 
 const DefaultStoryComponent = () => {
   return (
-    <MuiCard className="min-w-4 max-w-16">
+    <MuiCard className="min-w-16">
       <MuiCard.Header>Card Header</MuiCard.Header>
       <MuiCard.Content>
         Content for MUI Card

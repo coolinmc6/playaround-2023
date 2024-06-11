@@ -34,7 +34,7 @@ const FitnessCard = ({ title, items, clickHandler, disabled = false }: FitnessCa
               <div className="flex-grow">
                 {item.name}
               </div>
-              <div className="w-15">
+              <div className="w-15 pl-2">
                 <Switch checked={item.checked} onClick={handleSwitchClick(item)} />
               </div>
             </div>

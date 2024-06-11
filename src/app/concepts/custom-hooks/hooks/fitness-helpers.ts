@@ -81,6 +81,7 @@ export const getDateQueries = (entries: Entry[]): DateQueries => {
     lastDay: filterEntriesByDate(entries, 1),
     lastSevenDays: filterEntriesByDate(entries, 7),
     lastThirtyDays: filterEntriesByDate(entries, 30),
+    lastSixtyDays: filterEntriesByDate(entries, 60),
   }
 }
 
@@ -102,6 +103,7 @@ export const getTotalsByDate = (dateQueries: DateQueries): DateQueryItems => {
 type TotalsObject = {
   totalsByType: FitnessStatsMap;
   totalsByName: FitnessItemListedMap;
+  daysCount: string
 }
 
 // const flattenItems = (items: FlatEntry[]) => {
@@ -112,7 +114,8 @@ type TotalsObject = {
 export const createAllTotalsObject = (items: FlatEntry[]): TotalsObject => {
   return {
     totalsByType: getTotalsByType(items.map(entry => entry.items).flat()),
-    totalsByName: getTotalsByName(items.map(entry => entry.items).flat())
+    totalsByName: getTotalsByName(items.map(entry => entry.items).flat()),
+    daysCount: `${items.length} days`
   }
 }
 

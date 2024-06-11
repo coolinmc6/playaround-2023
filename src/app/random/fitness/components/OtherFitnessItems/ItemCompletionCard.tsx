@@ -14,15 +14,16 @@ import { getProgressColor } from '@/app/random/fitness/helpers';
 const ProgressRow = ({ item }: { item: any}) => {
   return (
     <div className="p-2 mt-2">
-      <div className="pb-2">{item.type}</div>
-      <div className="flex justify-between">
-        <div className="px-4">
+      <div className="pb-2 text-sm font-bold">{item.type}</div>
+      {/* <div className="flex justify-between">
+        <div className="pr-4">
           <Badge type={getBadgeType(item.percentage)}>
             {item.percentage}%
           </Badge>
         </div>
         <ProgressBar value={item.percentage} color={getProgressColor(item.percentage)} />
-      </div>
+      </div> */}
+      <ProgressBar value={item.percentage} color={getProgressColor(item.percentage)} />
     </div>
   )
 }
@@ -45,11 +46,24 @@ const ItemCompletionCards = () => {
       type: key
     }
   }).sort((a, b) => b.percentage - a.percentage)
+  const totalsByNameSixtyDays = Object.keys(refined.totals.lastSixtyDays.totalsByName).map((key) => {
+    return {
+      ...refined.totals.lastSixtyDays.totalsByName[key],
+      type: key
+    }
+  }).sort((a, b) => b.percentage - a.percentage)
+
+  const sevenDaysCount = refined.totals.lastSevenDays.daysCount
+  const thirtyDaysCount = refined.totals.lastThirtyDays.daysCount
+  const sixtyDaysCount = refined.totals.lastSixtyDays.daysCount
 
   return (
     <div className={mediumCardBaseRow}>
       <Card >
-        <Badge type="info">Last Seven Days</Badge>
+        <div className="flex justify-between">
+          <Badge type="info">Last Seven Days</Badge>
+          {sevenDaysCount}
+        </div>
         {totalsByNameSevenDays.map((object, index) => {
           return (
             <ProgressRow key={index} item={object} />
@@ -57,8 +71,22 @@ const ItemCompletionCards = () => {
         })}
       </Card>
       <Card >
-        <Badge type="info">Last Thirty Days</Badge>
+        <div className="flex justify-between">
+          <Badge type="info">Last Thirty Days</Badge>
+          {thirtyDaysCount}
+        </div>
         {totalsByNameThirtyDays.map((object, index) => {
+          return (
+            <ProgressRow key={index} item={object} />
+          )
+        })}
+      </Card>
+      <Card >
+        <div className="flex justify-between">
+          <Badge type="info">Last Sixty Days</Badge>
+          {sixtyDaysCount}
+        </div>
+        {totalsByNameSixtyDays.map((object, index) => {
           return (
             <ProgressRow key={index} item={object} />
           )
