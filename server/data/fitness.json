@@ -2377,12 +2377,786 @@
           },
           {
             "name": "Lift",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "50 Squats",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Long plank",
+            "checked": true,
+            "type": "fitness"
+          }
+        ],
+        "nutrition": [
+          {
+            "name": "baby carrots or vegetable serving",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log breakfast into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log lunch into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log dinner into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log snacks into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          }
+        ],
+        "other": [
+          {
+            "name": "Weigh self to get baseline",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "No food after 9pm",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "No alcohol",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "Creatine",
+            "checked": true,
+            "type": "other"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2024-06-12T13:24:10.130Z",
+      "data": {
+        "fitness": [
+          {
+            "name": "Daily Elliptical",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Abs",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Kettlebells",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Lift",
             "checked": false,
             "type": "fitness"
           },
           {
             "name": "50 Squats",
             "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Long plank",
+            "checked": false,
+            "type": "fitness"
+          }
+        ],
+        "nutrition": [
+          {
+            "name": "baby carrots or vegetable serving",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log breakfast into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log lunch into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log dinner into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log snacks into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          }
+        ],
+        "other": [
+          {
+            "name": "Weigh self to get baseline",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "No food after 9pm",
+            "checked": false,
+            "type": "other"
+          },
+          {
+            "name": "No alcohol",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "Creatine",
+            "checked": false,
+            "type": "other"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2024-06-13T12:47:13.592Z",
+      "data": {
+        "fitness": [
+          {
+            "name": "Daily Elliptical",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Abs",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Kettlebells",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Lift",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "50 Squats",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Long plank",
+            "checked": false,
+            "type": "fitness"
+          }
+        ],
+        "nutrition": [
+          {
+            "name": "baby carrots or vegetable serving",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log breakfast into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log lunch into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log dinner into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log snacks into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          }
+        ],
+        "other": [
+          {
+            "name": "Weigh self to get baseline",
+            "checked": false,
+            "type": "other"
+          },
+          {
+            "name": "No food after 9pm",
+            "checked": false,
+            "type": "other"
+          },
+          {
+            "name": "No alcohol",
+            "checked": false,
+            "type": "other"
+          },
+          {
+            "name": "Creatine",
+            "checked": false,
+            "type": "other"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2024-06-14T17:02:07.877Z",
+      "data": {
+        "fitness": [
+          {
+            "name": "Daily Elliptical",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Abs",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Kettlebells",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Lift",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "50 Squats",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Long plank",
+            "checked": false,
+            "type": "fitness"
+          }
+        ],
+        "nutrition": [
+          {
+            "name": "baby carrots or vegetable serving",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log breakfast into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log lunch into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log dinner into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log snacks into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          }
+        ],
+        "other": [
+          {
+            "name": "Weigh self to get baseline",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "No food after 9pm",
+            "checked": false,
+            "type": "other"
+          },
+          {
+            "name": "No alcohol",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "Creatine",
+            "checked": false,
+            "type": "other"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2024-06-17T14:56:28.230Z",
+      "data": {
+        "fitness": [
+          {
+            "name": "Daily Elliptical",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Abs",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Kettlebells",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Lift",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "50 Squats",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Long plank",
+            "checked": true,
+            "type": "fitness"
+          }
+        ],
+        "nutrition": [
+          {
+            "name": "baby carrots or vegetable serving",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log breakfast into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log lunch into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log dinner into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log snacks into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          }
+        ],
+        "other": [
+          {
+            "name": "Weigh self to get baseline",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "No food after 9pm",
+            "checked": false,
+            "type": "other"
+          },
+          {
+            "name": "No alcohol",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "Creatine",
+            "checked": true,
+            "type": "other"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2024-06-18T16:24:33.017Z",
+      "data": {
+        "fitness": [
+          {
+            "name": "Daily Elliptical",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Abs",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Kettlebells",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Lift",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "50 Squats",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Long plank",
+            "checked": true,
+            "type": "fitness"
+          }
+        ],
+        "nutrition": [
+          {
+            "name": "baby carrots or vegetable serving",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log breakfast into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log lunch into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log dinner into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log snacks into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          }
+        ],
+        "other": [
+          {
+            "name": "Weigh self to get baseline",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "No food after 9pm",
+            "checked": false,
+            "type": "other"
+          },
+          {
+            "name": "No alcohol",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "Creatine",
+            "checked": false,
+            "type": "other"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2024-06-19T20:51:28.643Z",
+      "data": {
+        "fitness": [
+          {
+            "name": "Daily Elliptical",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Abs",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Kettlebells",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Lift",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "50 Squats",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Long plank",
+            "checked": true,
+            "type": "fitness"
+          }
+        ],
+        "nutrition": [
+          {
+            "name": "baby carrots or vegetable serving",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log breakfast into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log lunch into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log dinner into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log snacks into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          }
+        ],
+        "other": [
+          {
+            "name": "Weigh self to get baseline",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "No food after 9pm",
+            "checked": false,
+            "type": "other"
+          },
+          {
+            "name": "No alcohol",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "Creatine",
+            "checked": true,
+            "type": "other"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2024-06-21T03:10:56.192Z",
+      "data": {
+        "fitness": [
+          {
+            "name": "Daily Elliptical",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Abs",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Kettlebells",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Lift",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "50 Squats",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Long plank",
+            "checked": true,
+            "type": "fitness"
+          }
+        ],
+        "nutrition": [
+          {
+            "name": "baby carrots or vegetable serving",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log breakfast into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log lunch into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log dinner into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log snacks into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          }
+        ],
+        "other": [
+          {
+            "name": "Weigh self to get baseline",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "No food after 9pm",
+            "checked": false,
+            "type": "other"
+          },
+          {
+            "name": "No alcohol",
+            "checked": true,
+            "type": "other"
+          },
+          {
+            "name": "Creatine",
+            "checked": true,
+            "type": "other"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2024-06-21T13:29:21.574Z",
+      "data": {
+        "fitness": [
+          {
+            "name": "Daily Elliptical",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Abs",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Kettlebells",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Lift",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "50 Squats",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Long plank",
+            "checked": false,
+            "type": "fitness"
+          }
+        ],
+        "nutrition": [
+          {
+            "name": "baby carrots or vegetable serving",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log breakfast into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log lunch into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log dinner into MyFitnessPal",
+            "checked": false,
+            "type": "nutrition"
+          },
+          {
+            "name": "Log snacks into MyFitnessPal",
+            "checked": true,
+            "type": "nutrition"
+          }
+        ],
+        "other": [
+          {
+            "name": "Weigh self to get baseline",
+            "checked": false,
+            "type": "other"
+          },
+          {
+            "name": "No food after 9pm",
+            "checked": false,
+            "type": "other"
+          },
+          {
+            "name": "No alcohol",
+            "checked": false,
+            "type": "other"
+          },
+          {
+            "name": "Creatine",
+            "checked": true,
+            "type": "other"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2024-06-25T20:52:58.463Z",
+      "data": {
+        "fitness": [
+          {
+            "name": "Daily Elliptical",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Abs",
+            "checked": true,
+            "type": "fitness"
+          },
+          {
+            "name": "Daily Kettlebells",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "Lift",
+            "checked": false,
+            "type": "fitness"
+          },
+          {
+            "name": "50 Squats",
+            "checked": false,
             "type": "fitness"
           },
           {

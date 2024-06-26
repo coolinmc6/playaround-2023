@@ -28,7 +28,8 @@ const smallCardBaseRow = "grid grid-cols-3 xl:grid-cols-4 gap-4 p-4"
 const FitnessPublic = () => {
 
   const { refined } = useFitnessData();
-  
+
+  const trackerPercentage = refined?.trackerTotals?.dateCompletions.filter(d => d.color === 'green')?.length / refined?.trackerTotals?.dateCompletions?.length * 100
 
   return (
     <section className="base">
@@ -44,7 +45,14 @@ const FitnessPublic = () => {
             </TabPanel>
             <TabPanel>
               <Card className="p-2 m-4 max-w-2xl">
-                <div className="text-2xl mb-2">Tracker Completion</div>
+                <div className="flex justify-between">
+                  <div className="text-2xl mb-2">Tracker Completion</div>
+                  <div className="text-sm">
+                    <Badge type={getBadgeType(trackerPercentage)}>
+                      {trackerPercentage}%
+                    </Badge>
+                  </div>
+                </div>
                 <Tracker data={refined.trackerTotals.dateCompletions} />
               </Card>
             </TabPanel>

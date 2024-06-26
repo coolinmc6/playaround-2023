@@ -5,7 +5,6 @@ import { useFitnessData } from '@/app/concepts/custom-hooks/hooks/useFitness';
 
 const AllTimeFitnessCards = () => {
   const { refined } = useFitnessData();
-  console.log({ refined })
   const { fitness, nutrition, other } = refined.totalsByType
   const totals = [fitness, nutrition, other]
   const smallCardBaseRow = "grid grid-cols-3 xl:grid-cols-4 gap-4 p-4"

@@ -96,7 +96,6 @@ export const getTotalsByDate = (dateQueries: DateQueries): DateQueryItems => {
     object[key] = array.map(getDailyItems) as FlatEntry[];
   });
 
-  console.log(object);
   return object;
 };
 

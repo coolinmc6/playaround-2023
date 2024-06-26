@@ -36,7 +36,7 @@ export default function RootLayout ({
           <DialogContainer />
           <ToastList />
         </main>
-        <script async src="./prism.js"></script>
+        {/* <script async src="./prism.js"></script> */}
       </body>
     </html>
   )

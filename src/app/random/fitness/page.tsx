@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 import { loadFitnessData, saveFitnessData } from '@/services/requests';
 import { addToast } from '@/app/store/toast';
@@ -20,14 +20,30 @@ const Fitness = () => {
   const [loading, setLoading] = useState(false);
   const { raw: { reversed } } = useFitnessData();
 
-  useEffect(() => {
+  const handleLoadFitnessData = useCallback(() => {
     loadFitnessData().then((res) => {
-      
       setData(res.data)
+      addToast({
+        id: Math.random().toString(36).substring(7),
+        open: true,
+        severity: 'success',
+        message: 'Data loaded successfully'
+      })
     }).catch((err) => {
-      
+      addToast({
+        id: Math.random().toString(36).substring(7),
+        open: true,
+        severity: 'error',
+        message: `Error: ${err.toString()}`
+      })
+
+      console.log(err)
     })
   }, []);
+
+  useEffect(() => {
+    handleLoadFitnessData();
+  }, [handleLoadFitnessData]);
 
   const handleSwitchClick = (item: Item) => {
     
@@ -44,6 +60,7 @@ const Fitness = () => {
         severity: 'success',
         message: 'Data saved successfully'
       })
+      handleLoadFitnessData()
     
     }).catch(err => {
       

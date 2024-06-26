@@ -33,7 +33,6 @@ const mediumCardBaseRow = "grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap
 const ItemCompletionCards = () => {
 
   const { refined } = useFitnessData();
-  console.log({ refined })
   const totalsByNameSevenDays = Object.keys(refined.totals.lastSevenDays.totalsByName).map((key) => {
     return {
       ...refined.totals.lastSevenDays.totalsByName[key],

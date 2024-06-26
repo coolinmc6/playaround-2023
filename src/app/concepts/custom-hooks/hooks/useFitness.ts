@@ -27,8 +27,7 @@ export const useFitnessData = () => {
   const dateInfo = getDateQueries(entries)
 
   const cleaned = getTotalsByDate(dateInfo)
-  const dateListObject = new DateListObject(entries)
-  console.log(dateListObject)
+  // const dateListObject = new DateListObject(entries)
   return {
     
     raw: {
@@ -55,7 +54,7 @@ export const useFitnessData = () => {
           const object = getLast30DaysData(reversed)[date]
           return {
             tooltip: date,
-            color: object !== null ? 'green' : 'red',
+            color: object !== null ? 'green' : 'neutral',
           }
         }),
       },
